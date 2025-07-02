@@ -1,4 +1,17 @@
 {
+
+  "user": [
+    {
+      "user_id": "user_12345",
+      "username": "john_doe",
+      "email": "doviethai01112003@gmail.com",
+      "password": "haimit",
+      "avatar":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOyi-Jtqcea06oe7YZyIml-8Bg0bVnK6YhXg&s",
+      "gender":"male",
+      "role":"admin"
+    }
+  ],
+    
   "posts": [
     
     {
@@ -37,6 +50,94 @@
           "topic_name": "Dan Milmo"
         }
       ]
+    },
+    {
+      "title": "Iran's dayslong internet blackout leave public in dark",
+      "link": "https://apnews.com/article/iran-internet-blackout-israel-war-6aa315eff871579f8bfc220ce3930e5f",
+      "snippet": "As the war between Israel and Iran hits the one-week mark, Iranians have spent nearly half of the conflict in a near-communication blackout, ...",
+      "photo_url": "https://dims.apnews.com/dims4/default/ab03851/2147483647/strip/true/crop/8640x5751+0+5/resize/320x213!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F3c%2F9d%2F03b2b371d4a0529c33c4eae1bd47%2F2e5c4b9f0f0a4577a82e5dd51d4c92bc",
+      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNHdTa05MTUROWE4wdG1ORWhDVFJEVkFSakFBaWdLTWdZUlFJNFBwUWM=-w200-h200-p-df-rw",
+      "published_datetime_utc": "2025-06-20T10:32:00.000Z",
+      "authors": [
+        "Farnoush Amiri"
+      ],
+      "source_url": "https://apnews.com",
+      "source_name": "AP News",
+      "source_logo_url": null,
+      "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://apnews.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+      "source_publication_id": "CAAqJAgKIh5DQklTRUFnTWFnd0tDbUZ3Ym1WM2N5NWpiMjBvQUFQAQ",
+      "related_topics": [
+        {
+          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZuWnpaZmFqazJheElDWlc0b0FBUAE",
+          "topic_name": "Farnoush Amiri"
+        }
+      ],
+      "sub_articles": [
+        {
+          "title": "Iranians Find Pockets of Connection Amid Internet Blackout",
+          "link": "https://www.nytimes.com/2025/06/21/world/middleeast/iran-internet-blackout.html",
+          "photo_url": "https://static01.nyt.com/images/2025/06/21/multimedia/21israel-iran-blackout-tfmj/21israel-iran-blackout-tfmj-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
+          "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNXRObTkzVG5GamMzcElURUozVFJDUUF4allCQ2dLTWdZaHdvNlBQUVk=-w200-h200-p-df-rw",
+          "published_datetime_utc": "2025-06-21T18:16:21.000Z",
+          "authors": [
+            "Parin Behrooz"
+          ],
+          "source_url": "https://www.nytimes.com",
+          "source_name": "The New York Times",
+          "source_logo_url": null,
+          "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.nytimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+          "source_publication_id": "CAAqJQgKIh9DQklTRVFnTWFnMEtDMjU1ZEdsdFpYTXVZMjl0S0FBUAE",
+          "related_topics": [
+            {
+              "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZ0ZG5RMGVHTnlOQklDWlc0b0FBUAE",
+              "topic_name": "Parin Behrooz"
+            }
+          ]
+        },
+        {
+          "title": "Iran plunged into an internet near-blackout during deepening conflict",
+          "link": "https://www.nbcnews.com/tech/internet/iran-plunged-internet-blackout-deepening-conflict-rcna213544",
+          "photo_url": "https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2025-06/250617-tehran-iran-ew-108p-4ab10e.jpg",
+          "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNUdWSGxRYTFoRFZtRmFNa053VFJERUF4aW1CU2dLTWdZRnBJaEl5Z00=-w200-h200-p-df-rw",
+          "published_datetime_utc": "2025-06-17T21:30:19.000Z",
+          "authors": [
+            "Kevin Collier"
+          ],
+          "source_url": "https://www.nbcnews.com",
+          "source_name": "NBC News",
+          "source_logo_url": null,
+          "source_favicon_url": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.nbcnews.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+          "source_publication_id": "CAAqJQgKIh9DQklTRVFnTWFnMEtDMjVpWTI1bGQzTXVZMjl0S0FBUAE",
+          "related_topics": [
+            {
+              "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZ4TWpJNGNUQm1iQklDWlc0b0FBUAE",
+              "topic_name": "Kevin Collier"
+            }
+          ]
+        },
+        {
+          "title": "Tehran warns Iranians: Don’t install Elon Musk’s Starlink internet",
+          "link": "https://www.jpost.com/middle-east/iran-news/article-858635",
+          "photo_url": "https://images.jpost.com/image/upload/f_auto,fl_lossy/q_auto/c_fill,g_faces:center,h_720,w_1280/669394",
+          "thumbnail_url": "https://news.google.com/api/attachments/CC8iI0NnNHlRMmRtVmtsdVJXdHZOMlJPVFJDZkF4ampCU2dLTWdB=-w200-h200-p-df-rw",
+          "published_datetime_utc": "2025-06-23T01:05:00.000Z",
+          "authors": [
+            "Itay Gal"
+          ],
+          "source_url": "https://www.jpost.com",
+          "source_name": "The Jerusalem Post",
+          "source_logo_url": null,
+          "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.jpost.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+          "source_publication_id": "CAAqIggKIhxDQklTRHdnTWFnc0tDV3B3YjNOMExtTnZiU2dBUAE",
+          "related_topics": [
+            {
+              "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZuWW1oemJqVTRjaElDWlc0b0FBUAE",
+              "topic_name": "Itay Gal"
+            }
+          ]
+        }
+      ],
+      "story_id": "CAAqNggKIjBDQklTSGpvSmMzUnZjbmt0TXpZd1NoRUtEd2otZ3NHbkRoRlZPdTZKSzRjREhDZ0FQAQ"
     },
     {
       "title": "The Entire Internet Is Reverting to Beta",
@@ -264,7 +365,7 @@
       "related_topics": [
         {
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtTURGb09XTnNiaElDWlc0b0FBUAE",
-          "topic_name": "Adam Hejl"
+          "topi c_name": "Adam Hejl"
         }
       ]
     },
