@@ -1,0 +1,84 @@
+/* Container bao quanh form */
+.form-container {
+  max-width: 450px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề */
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Form chính */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ô nhập liệu */
+.form input {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Nút đăng ký */
+.form button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.form button:hover {
+  background-color: #0056b3;
+}
+
+/* Thông báo lỗi */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Link chuyển đến đăng nhập */
+.form-container p {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+.form-container a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.form-container a:hover {
+  text-decoration: underline;
+}
+
+.show-password {
+  margin-top: -10px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #444;
+}

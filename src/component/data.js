@@ -1,17 +1,5 @@
-{
-  "users": [
-    {
-      "id": "d45e",
-      "username": "admin1",
-      "password": "123456",
-      "email": "admin@gmail.com",
-      "firstname": "Hứa",
-      "lastname": "Hẹn",
-      "phone": "0987654321"
-    }
-  ],
-  "posts": [
-    {
+export const posts = [
+ {
       "title": "China tightens internet controls with new centralized form of virtual ID",
       "link": "https://www.cnn.com/2025/06/20/tech/china-censorship-internet-id-hnk-intl",
       "snippet": "Since Chinese leader Xi Jinping took power in 2012, the country has further tightened its grip on the digital space through an army of censors.",
@@ -24,8 +12,7 @@
       "source_logo_url": null,
       "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.cnn.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
       "source_publication_id": "CAAqIAgKIhpDQklTRFFnTWFna0tCMk51Ymk1amIyMG9BQVAB",
-      "related_topics": [],
-      "id": "d9a1"
+      "related_topics": []
     },
     {
       "title": "Internet users advised to change passwords after 16bn logins exposed",
@@ -47,8 +34,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtTUY4M2RqWmZlaElDWlc0b0FBUAE",
           "topic_name": "Dan Milmo"
         }
-      ],
-      "id": "0caf"
+      ]
     },
     {
       "title": "The Entire Internet Is Reverting to Beta",
@@ -70,8 +56,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZzWjE4ME9XTmZNQklDWlc0b0FBUAE",
           "topic_name": "Matteo Wong"
         }
-      ],
-      "id": "6203"
+      ]
     },
     {
       "title": "The Internet as We Knew It Is Over. The Only Thing Left Is to Go Outside.",
@@ -93,8 +78,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZqTm14dFpGODVZaElDWlc0b0FBUAE",
           "topic_name": "Scaachi Koul"
         }
-      ],
-      "id": "8dbc"
+      ]
     },
     {
       "title": "Why am I filled with nostalgia for a pre-internet age I never knew? | Isabel Brooks",
@@ -116,8 +100,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEYyY1dKc1pEZzVjQklDWlc0b0FBUAE",
           "topic_name": "Isabel Brooks"
         }
-      ],
-      "id": "22b9"
+      ]
     },
     {
       "title": "The internet of agents is rising fast, and publishers are nowhere near ready",
@@ -139,8 +122,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtTURGalltaHFjQklDWlc0b0FBUAE",
           "topic_name": "Pete Pachal"
         }
-      ],
-      "id": "e079"
+      ]
     },
     {
       "title": "Metronet Lights Up Kokomo with 100% Fiber-Optic Internet",
@@ -155,8 +137,7 @@
       "source_logo_url": null,
       "source_favicon_url": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.businesswire.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
       "source_publication_id": "CAAqLAgKIiZDQklTRmdnTWFoSUtFR0oxYzJsdVpYTnpkMmx5WlM1amIyMG9BQVAB",
-      "related_topics": [],
-      "id": "48e3"
+      "related_topics": []
     },
     {
       "title": "Digitalizing Malawi to improve access to education, public services, and income opportunities",
@@ -171,8 +152,7 @@
       "source_logo_url": null,
       "source_favicon_url": "https://encrypted-tbn0.gstatic.com/faviconV2?url=http://www.worldbank.org&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
       "source_publication_id": "CAAqKAgKIiJDQklTRXdnTWFnOEtEWGR2Y214a1ltRnVheTV2Y21jb0FBUAE",
-      "related_topics": [],
-      "id": "181b"
+      "related_topics": []
     },
     {
       "title": "Participants from 170 countries meet in Norway for the annual Internet Governance Forum",
@@ -187,8 +167,7 @@
       "source_logo_url": null,
       "source_favicon_url": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.coe.int&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
       "source_publication_id": "CAAqIAgKIhpDQklTRFFnTWFna0tCMk52WlM1cGJuUW9BQVAB",
-      "related_topics": [],
-      "id": "81a4"
+      "related_topics": []
     },
     {
       "title": "Snapshot: The latest internet satellite permits in Latin America",
@@ -203,8 +182,7 @@
       "source_logo_url": null,
       "source_favicon_url": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.bnamericas.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
       "source_publication_id": "CAAqKQgKIiNDQklTRkFnTWFoQUtEbUp1WVcxbGNtbGpZWE11WTI5dEtBQVAB",
-      "related_topics": [],
-      "id": "a339"
+      "related_topics": []
     },
     {
       "title": "Spectrum Internet: Unlimited, no-contract home Wi-Fi",
@@ -219,8 +197,7 @@
       "source_logo_url": null,
       "source_favicon_url": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.usatoday.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
       "source_publication_id": "CAAqJggKIiBDQklTRWdnTWFnNEtESFZ6WVhSdlpHRjVMbU52YlNnQVAB",
-      "related_topics": [],
-      "id": "b1e3"
+      "related_topics": []
     },
     {
       "title": "Elon Musk Raises Eyebrows With Bold Plan to Rewrite the Internet",
@@ -235,8 +212,7 @@
       "source_logo_url": null,
       "source_favicon_url": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://tech.yahoo.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
       "source_publication_id": "CAAqKQgKIiNDQklTRkFnTWFoQUtEblJsWTJndWVXRm9iMjh1WTI5dEtBQVAB",
-      "related_topics": [],
-      "id": "f91d"
+      "related_topics": []
     },
     {
       "title": "Amazon.com remains top internet idea at JPMorgan",
@@ -251,8 +227,7 @@
       "source_logo_url": null,
       "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.tipranks.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
       "source_publication_id": "CAAqJggKIiBDQklTRWdnTWFnNEtESFJwY0hKaGJtdHpMbU52YlNnQVAB",
-      "related_topics": [],
-      "id": "36ea"
+      "related_topics": []
     },
     {
       "title": "Hospitality Wi-Fi Transformed: Cambium Networks ONE Network Delivers Faster, Simpler Guest Internet Access",
@@ -267,8 +242,7 @@
       "source_logo_url": null,
       "source_favicon_url": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.morningstar.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
       "source_publication_id": "CAAqKggKIiRDQklTRlFnTWFoRUtEMjF2Y201cGJtZHpkR0Z5TG1OdmJTZ0FQAQ",
-      "related_topics": [],
-      "id": "3c34"
+      "related_topics": []
     },
     {
       "title": "1 Internet Stock with Impressive Fundamentals and 2 to Turn Down",
@@ -290,8 +264,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtTURGb09XTnNiaElDWlc0b0FBUAE",
           "topic_name": "Adam Hejl"
         }
-      ],
-      "id": "aaaf"
+      ]
     },
     {
       "title": "New York internet provider enters Baltimore with $100M investment",
@@ -313,8 +286,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZ4Ym1OMlpqTnVOaElDWlc0b0FBUAE",
           "topic_name": "Matt Hooke"
         }
-      ],
-      "id": "6ea6"
+      ]
     },
     {
       "title": "Amazon launches second batch of Kuiper internet satellites, taking on Elon Musk's Starlink",
@@ -329,8 +301,7 @@
       "source_logo_url": null,
       "source_favicon_url": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://oodaloop.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
       "source_publication_id": "CAAqJggKIiBDQklTRWdnTWFnNEtERzl2WkdGc2IyOXdMbU52YlNnQVAB",
-      "related_topics": [],
-      "id": "6d5b"
+      "related_topics": []
     },
     {
       "title": "MEF brings Layer 2 over Broadband to internet access services and LSO software package",
@@ -345,8 +316,7 @@
       "source_logo_url": null,
       "source_favicon_url": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.telecompaper.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
       "source_publication_id": "CAAqLAgKIiZDQklTRmdnTWFoSUtFSFJsYkdWamIyMXdZWEJsY2k1amIyMG9BQVAB",
-      "related_topics": [],
-      "id": "588f"
+      "related_topics": []
     },
     {
       "title": "Almost half of young people would prefer a world without internet, UK study finds",
@@ -368,8 +338,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEYzYm14b05IbzFaaElDWlc0b0FBUAE",
           "topic_name": "Raphael Boyd"
         }
-      ],
-      "id": "cb1f"
+      ]
     },
     {
       "title": "YouTube turns 20: How one video at the zoo changed the internet forever",
@@ -391,8 +360,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtTW1KaVoyd3haQklDWlc0b0FBUAE",
           "topic_name": "Christianna Silva"
         }
-      ],
-      "id": "4e6d"
+      ]
     },
     {
       "title": "Starlink ups congestion fee to $750 in some states",
@@ -414,8 +382,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEYzZDJKd2JERjJNQklDWlc0b0FBUAE",
           "topic_name": "Daniel Zlatev"
         }
-      ],
-      "id": "48f5"
+      ]
     },
     {
       "title": "The Kids Online Safety Act Will Make the Internet Worse for Everyone",
@@ -437,8 +404,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtZVhZM09XUXdiaElDWlc0b0FBUAE",
           "topic_name": "Joe Mullin"
         }
-      ],
-      "id": "ccb5"
+      ]
     },
     {
       "title": "What Is 5G Home Internet and Is It Good Enough for Your Home?",
@@ -460,8 +426,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtTUhsdGVuRmpNaElDWlc0b0FBUAE",
           "topic_name": "Trey Paul"
         }
-      ],
-      "id": "63f4"
+      ]
     },
     {
       "title": "Update: Chinese premier signs decree unveiling tax-related information rules concerning internet platform companies",
@@ -476,8 +441,7 @@
       "source_logo_url": null,
       "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://english.news.cn&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
       "source_publication_id": "CAAqKggKIiRDQklTRlFnTWFoRUtEMlZ1WjJ4cGMyZ3VibVYzY3k1amJpZ0FQAQ",
-      "related_topics": [],
-      "id": "d2d8"
+      "related_topics": []
     },
     {
       "title": "Maybe AI Slop Is Killing the Internet, After All",
@@ -499,8 +463,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtTUhsd2R6a3lkeElDWlc0b0FBUAE",
           "topic_name": "Issie Lapowsky"
         }
-      ],
-      "id": "faf6"
+      ]
     },
     {
       "title": "How the Internet Left 4chan Behind",
@@ -522,8 +485,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtTUhsdGNYazVkeElDWlc0b0FBUAE",
           "topic_name": "Kyle Chayka"
         }
-      ],
-      "id": "a25e"
+      ]
     },
     {
       "title": "Raygun's Olympic breaking broke the internet and continues to polarise",
@@ -550,8 +512,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZ4Ym1NNGREWnliQklDWlc0b0FBUAE",
           "topic_name": "Rebecca Armstrong"
         }
-      ],
-      "id": "dd21"
+      ]
     },
     {
       "title": "Future of the Internet Protocol Television Market: Strategic",
@@ -566,8 +527,7 @@
       "source_logo_url": null,
       "source_favicon_url": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.openpr.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
       "source_publication_id": "CAAqJAgKIh5DQklTRUFnTWFnd0tDbTl3Wlc1d2NpNWpiMjBvQUFQAQ",
-      "related_topics": [],
-      "id": "dd62"
+      "related_topics": []
     },
     {
       "title": "Yes, Your Internet Provider Can Throttle Your Speeds. Here’s How to Make It Stop",
@@ -594,8 +554,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZ5Y1hjNU4ybzRYeElDWlc0b0FBUAE",
           "topic_name": "Trisha Jandoc"
         }
-      ],
-      "id": "179d"
+      ]
     },
     {
       "title": "Go Delete Yourself From the Internet. Seriously, Here’s How.",
@@ -617,8 +576,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEYwTVdnMk1tZzRYeElDWlc0b0FBUAE",
           "topic_name": "Nicole Nguyen"
         }
-      ],
-      "id": "178b"
+      ]
     },
     {
       "title": "Supreme Court May Decide if the Government Can Childproof the Internet",
@@ -645,8 +603,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEY0TURKeE1ISnhZaElDWlc0b0FBUAE",
           "topic_name": "Sam Lafrance"
         }
-      ],
-      "id": "df2d"
+      ]
     },
     {
       "title": "A Look Into the Future: Consumer Internet of Things Market Set",
@@ -661,8 +618,7 @@
       "source_logo_url": null,
       "source_favicon_url": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.openpr.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
       "source_publication_id": "CAAqJAgKIh5DQklTRUFnTWFnd0tDbTl3Wlc1d2NpNWpiMjBvQUFQAQ",
-      "related_topics": [],
-      "id": "c5c1"
+      "related_topics": []
     },
     {
       "title": "This AI Theory Is Sweeping the Internet. Here's What You Need to Know",
@@ -684,8 +640,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZ5Y1hjNU4ybzRYeElDWlc0b0FBUAE",
           "topic_name": "Trisha Jandoc"
         }
-      ],
-      "id": "cefd"
+      ]
     },
     {
       "title": "Why I gave up trying to delete myself from the internet",
@@ -707,8 +662,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZ4T1RSeWRtTnhOUklDWlc0b0FBUAE",
           "topic_name": "Avantika Chilkoti"
         }
-      ],
-      "id": "6fb0"
+      ]
     },
     {
       "title": "Pune Crime Files: How a fraudster frequented internet cafes to steal 23 identities, secure bank loans",
@@ -730,8 +684,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtTW1ONGFqaDZkaElDWlc0b0FBUAE",
           "topic_name": "Sushant Kulkarni"
         }
-      ],
-      "id": "2f12"
+      ]
     },
     {
       "title": "Elon Musk's Starlink satellite internet service India launch: Check release date, price, plans, speed and more",
@@ -746,8 +699,7 @@
       "source_logo_url": null,
       "source_favicon_url": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.financialexpress.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
       "source_publication_id": "CAAqMQgKIitDQklTR2dnTWFoWUtGR1pwYm1GdVkybGhiR1Y0Y0hKbGMzTXVZMjl0S0FBUAE",
-      "related_topics": [],
-      "id": "8f0d"
+      "related_topics": []
     },
     {
       "title": "The internet’s hidden gatekeeper is a ‘must have’, not an optional extra",
@@ -762,8 +714,7 @@
       "source_logo_url": null,
       "source_favicon_url": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.itnews.com.au&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
       "source_publication_id": "CAAqKAgKIiJDQklTRXdnTWFnOEtEV2wwYm1WM2N5NWpiMjB1WVhVb0FBUAE",
-      "related_topics": [],
-      "id": "139f"
+      "related_topics": []
     },
     {
       "title": "Telecom revenue surges; internet base shrinks slightly in Q1 2025: TRAI",
@@ -785,8 +736,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZyY25aek5uSnFlUklDWlc0b0FBUAE",
           "topic_name": "Yukta Raj"
         }
-      ],
-      "id": "7095"
+      ]
     },
     {
       "title": "Jio AX6000 Wi-Fi 6 Router promises high-speed internet, but with a major catch",
@@ -808,8 +758,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZ6Ym1aMk1IZGpjQklDWlc0b0FBUAE",
           "topic_name": "Saumya Nigam"
         }
-      ],
-      "id": "40f2"
+      ]
     },
     {
       "title": "Concerns raised for elderly residents living in West Acre as internet outage expected to last until the end of the week",
@@ -831,8 +780,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZ1YmpVeGVqTTBlaElDWlc0b0FBUAE",
           "topic_name": "Lucy Carter"
         }
-      ],
-      "id": "98e2"
+      ]
     },
     {
       "title": "Chinese researchers achieves internet 5 times faster than Starlink using 2-watt laser: Report",
@@ -847,8 +795,7 @@
       "source_logo_url": null,
       "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
       "source_publication_id": "CAAqOggKIjRDQklTSVFnTWFoMEtHM1JwYldWemIyWnBibVJwWVM1cGJtUnBZWFJwYldWekxtTnZiU2dBUAE",
-      "related_topics": [],
-      "id": "30b8"
+      "related_topics": []
     },
     {
       "title": "Internet Transactions Act now in effect",
@@ -863,8 +810,7 @@
       "source_logo_url": null,
       "source_favicon_url": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.manilatimes.net&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
       "source_publication_id": "CAAqKggKIiRDQklTRlFnTWFoRUtEMjFoYm1sc1lYUnBiV1Z6TG01bGRDZ0FQAQ",
-      "related_topics": [],
-      "id": "9fd1"
+      "related_topics": []
     },
     {
       "title": "Bengaluru or Hyderabad, which is better for job hunt for mid-level techies? Internet explodes with rants o",
@@ -879,8 +825,7 @@
       "source_logo_url": null,
       "source_favicon_url": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://m.economictimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
       "source_publication_id": "CAAqLQgKIidDQklTRndnTWFoTUtFV1ZqYjI1dmJXbGpkR2x0WlhNdVkyOXRLQUFQAQ",
-      "related_topics": [],
-      "id": "34c2"
+      "related_topics": []
     },
     {
       "title": "'We were just trying to get it to work': The failure that started the internet",
@@ -902,8 +847,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtTUhsM05XSm9NeElDWlc0b0FBUAE",
           "topic_name": "Scott Nover"
         }
-      ],
-      "id": "cd16"
+      ]
     },
     {
       "title": "Broadband to be rolled out to 100,000 homes and businesses",
@@ -918,8 +862,7 @@
       "source_logo_url": null,
       "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.bournemouthecho.co.uk&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
       "source_publication_id": "CAAqMggKIixDQklTR3dnTWFoY0tGV0p2ZFhKdVpXMXZkWFJvWldOb2J5NWpieTUxYXlnQVAB",
-      "related_topics": [],
-      "id": "1c72"
+      "related_topics": []
     },
     {
       "title": "Reddit is ugly and utilitarian – but it’s the best space left on the internet",
@@ -941,8 +884,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZrWHpoeVptUXhheElDWlc0b0FBUAE",
           "topic_name": "Zing Tsjeng"
         }
-      ],
-      "id": "2b21"
+      ]
     },
     {
       "title": "The internet under attack",
@@ -964,8 +906,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZuZUc1MmVXeDBNQklDWlc0b0FBUAE",
           "topic_name": "James Shires"
         }
-      ],
-      "id": "bf90"
+      ]
     },
     {
       "title": "Measuring the Internet of Things",
@@ -980,8 +921,7 @@
       "source_logo_url": null,
       "source_favicon_url": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.oecd.org&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
       "source_publication_id": "CAAqIQgKIhtDQklTRGdnTWFnb0tDRzlsWTJRdWIzSm5LQUFQAQ",
-      "related_topics": [],
-      "id": "8073"
+      "related_topics": []
     },
     {
       "title": "Blackstone consortium completes $5.1bn investment in Rogers Communications’ internet and wireless unit",
@@ -996,8 +936,7 @@
       "source_logo_url": null,
       "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://pe-insights.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
       "source_publication_id": "CAAqKggKIiRDQklTRlFnTWFoRUtEM0JsTFdsdWMybG5hSFJ6TG1OdmJTZ0FQAQ",
-      "related_topics": [],
-      "id": "1422"
+      "related_topics": []
     },
     {
       "title": "How the AI Boom Is like the Internet Boom (And How It Isn’t)",
@@ -1019,8 +958,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtTURFemJISndPQklDWlc0b0FBUAE",
           "topic_name": "James Pethokoukis"
         }
-      ],
-      "id": "b066"
+      ]
     },
     {
       "title": "Investing in what moves the internet forward",
@@ -1035,8 +973,7 @@
       "source_logo_url": null,
       "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://blog.mozilla.org&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
       "source_publication_id": "CAAqLAgKIiZDQklTRmdnTWFoSUtFR0pzYjJjdWJXOTZhV3hzWVM1dmNtY29BQVAB",
-      "related_topics": [],
-      "id": "a504"
+      "related_topics": []
     },
     {
       "title": "Tracking how our bodies work could change our lives",
@@ -1058,8 +995,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZvWTJSeGQzbG9aQklDWlc0b0FBUAE",
           "topic_name": "Xiao Liu"
         }
-      ],
-      "id": "2578"
+      ]
     },
     {
       "title": "Satellite Internet Expansion: Transforming Global Connectivity",
@@ -1081,8 +1017,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZ5TjNoNU1HNTJaaElDWlc0b0FBUAE",
           "topic_name": "Rhys Gregory"
         }
-      ],
-      "id": "f9f2"
+      ]
     },
     {
       "title": "London Internet Exchange Introduces Service Level Agreements",
@@ -1104,8 +1039,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZ1Ym5SeVp6UnFaaElDWlc0b0FBUAE",
           "topic_name": "Mark Jackson"
         }
-      ],
-      "id": "ad72"
+      ]
     },
     {
       "title": "Bluesky Is Plotting a Total Takeover of the Social Internet",
@@ -1127,8 +1061,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtTUhvM2R6RmlNeElDWlc0b0FBUAE",
           "topic_name": "Kate Knibbs"
         }
-      ],
-      "id": "622d"
+      ]
     },
     {
       "title": "South Dakota gets grant to fight internet crimes against kids",
@@ -1143,8 +1076,7 @@
       "source_logo_url": null,
       "source_favicon_url": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://brookingsregister.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
       "source_publication_id": "CAAqMggKIixDQklTR3dnTWFoY0tGV0p5YjI5cmFXNW5jM0psWjJsemRHVnlMbU52YlNnQVAB",
-      "related_topics": [],
-      "id": "24e4"
+      "related_topics": []
     },
     {
       "title": "6 in 10 people in the world regularly use the Internet",
@@ -1166,8 +1098,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZvTUhsNlpqbDNhQklDWlc0b0FBUAE",
           "topic_name": "Hannah Ritchie"
         }
-      ],
-      "id": "d508"
+      ]
     },
     {
       "title": "Nigeria’s Internet has a border problem. IXPN wants to fix it by 2030",
@@ -1189,8 +1120,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZuWW1wa1pHUnVjeElDWlc0b0FBUAE",
           "topic_name": "Frank Eleanya"
         }
-      ],
-      "id": "dccb"
+      ]
     },
     {
       "title": "BSNL launches Quantum 5G FWA, India's first indigenous SIM-less 5G internet service",
@@ -1212,8 +1142,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtZVhsbWFIQmtNaElDWlc0b0FBUAE",
           "topic_name": "Divyang Makwana"
         }
-      ],
-      "id": "86e9"
+      ]
     },
     {
       "title": "DOT pushes Internet Service Providers to move to Indian Standard Time",
@@ -1235,8 +1164,7 @@
           "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZ5YzJOM1puUjBjaElDWlc0b0FBUAE",
           "topic_name": "Ashmit Kumar"
         }
-      ],
-      "id": "270f"
+      ]
     }
-  ]
-}
+  
+];
