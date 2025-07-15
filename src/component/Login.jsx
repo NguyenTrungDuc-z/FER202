@@ -10,7 +10,9 @@ const Login = () => {
     password: '',
   });
 
+  const [rememberMe, setRememberMe] = useState(false); //  Thêm trạng thái "Nhớ mật khẩu"
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -20,6 +22,13 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (formData.username.trim() === '' || formData.password.trim() === '') {
+      setError(' Vui lòng điền đầy đủ thông tin!');
+      return;
+    }
+
+    setLoading(true);
+
     try {
       const res = await fetch(
         `http://localhost:9999/users?username=${formData.username}&password=${formData.password}`
@@ -28,19 +37,23 @@ const Login = () => {
 
       if (users.length > 0) {
         const user = users[0];
-        localStorage.setItem('user-info', JSON.stringify(user));
 
-        // ✅ Phân quyền điều hướng
+        //  Nếu nhớ mật khẩu thì lưu lâu dài, ngược lại thì dùng sessionStorage
+        const storage = rememberMe ? localStorage : sessionStorage;
+        storage.setItem('user-info', JSON.stringify(user));
+        storage.setItem('userId', user.id);
         if (user.role === 'admin') {
           navigate('/admin');
         } else {
           navigate('/');
         }
       } else {
-        setError('❌ Sai tài khoản hoặc mật khẩu!');
+        setError(' Sai tài khoản hoặc mật khẩu!');
       }
     } catch (error) {
-      setError('❌ Lỗi kết nối đến máy chủ.');
+      setError(' Không thể kết nối đến máy chủ.');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -58,6 +71,7 @@ const Login = () => {
             required
           />
         </label>
+
         <label>
           Mật khẩu:
           <input
@@ -68,8 +82,29 @@ const Login = () => {
             required
           />
         </label>
+
+        {/*  Phần "Nhớ mật khẩu" và "Quên mật khẩu" */}
+        <div className="login-options">
+          <label className="remember-me">
+           
+            <input
+              type="checkbox"
+              checked={rememberMe}
+              onChange={(e) => setRememberMe(e.target.checked)}
+            />
+           <span>Nhớ mật khẩu</span>
+            
+          </label>
+          <Link to="/forgot-password" className="forgot-password-link">
+            Quên mật khẩu?
+          </Link>
+        </div>
+
         {error && <p className="error-message">{error}</p>}
-        <button type="submit">Đăng nhập</button>
+
+        <button type="submit" disabled={loading}>
+          {loading ? 'Đang đăng nhập...' : 'Đăng nhập'}
+        </button>
 
         <div className="register-link">
           <p>

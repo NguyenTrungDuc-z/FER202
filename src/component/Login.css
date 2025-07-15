@@ -20,16 +20,17 @@
 }
 
 .login-form input {
-  width: 100%;
+  width: 92%;
   padding: 10px;
   margin-top: 6px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 14px;
+  
 }
 
 .login-form button {
-  width: 100%;
+  width: 30%;
   padding: 10px;
   background-color: #0077cc;
   color: white;
@@ -38,6 +39,7 @@
   font-size: 16px;
   cursor: pointer;
   margin-top: 16px;
+  margin-left: 135px;
 }
 
 .login-form button:hover {
@@ -75,5 +77,41 @@
 }
 
 .register-link a:hover {
+  text-decoration: underline;
+}
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0 12px 0;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.remember-me input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.remember-me span {
+  line-height: 1;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.forgot-password-link {
+  font-size: 14px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.forgot-password-link:hover {
   text-decoration: underline;
 }
