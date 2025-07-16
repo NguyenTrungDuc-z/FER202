@@ -1,37 +1,51 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import { FaHeart, FaRegHeart, FaCommentDots } from 'react-icons/fa';
+import React, { useEffect, useState } from "react";
+import { useParams, useNavigate, Link } from "react-router-dom"; // nhớ import Link để dẫn đến bài viết
+import axios from "axios";
+import { FaHeart, FaRegHeart, FaCommentDots } from "react-icons/fa";
 
 const PostDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [post, setPost] = useState(null);
+  const [relatedPosts, setRelatedPosts] = useState([]); // Bài liên quan
   const [user, setUser] = useState(null);
   const [likes, setLikes] = useState([]);
   const [comments, setComments] = useState([]);
   const [hasLiked, setHasLiked] = useState(false);
-  const [newComment, setNewComment] = useState('');
+  const [newComment, setNewComment] = useState("");
 
   useEffect(() => {
-    const storedUser = JSON.parse(localStorage.getItem('user-info') || sessionStorage.getItem('user-info'));
+    const storedUser = JSON.parse(
+      localStorage.getItem("user-info") || sessionStorage.getItem("user-info")
+    );
     setUser(storedUser);
 
     if (!storedUser) {
-      alert('Bạn cần đăng nhập để xem bài viết.');
-      localStorage.setItem('redirectPostId', id);
-      navigate('/login');
+      alert("Bạn cần đăng nhập để xem bài viết.");
+      localStorage.setItem("redirectPostId", id);
+      navigate("/login");
       return;
     }
 
-    axios.get(`http://localhost:9999/posts/${id}?_embed=comments&_embed=likes`)
-      .then(res => {
+    axios
+      .get(`http://localhost:9999/posts/${id}?_embed=comments&_embed=likes`)
+      .then(async (res) => {
         setPost(res.data);
         setLikes(res.data.likes || []);
         setComments(res.data.comments || []);
-        setHasLiked(res.data.likes?.some(like => like.userId === storedUser?.id));
+        setHasLiked(
+          res.data.likes?.some((like) => like.userId === storedUser?.id)
+        );
+
+        // Lấy bài viết liên quan cùng category, không lấy bài hiện tại, lấy tối đa 3 bài
+        if (res.data.categoryId) {
+          const relatedRes = await axios.get(
+            `http://localhost:9999/posts?categoryId=${res.data.categoryId}&id_ne=${id}&_limit=3`
+          );
+          setRelatedPosts(relatedRes.data);
+        }
       })
-      .catch(err => console.error(err));
+      .catch((err) => console.error(err));
   }, [id, navigate]);
 
   const handleToggleLike = async () => {
@@ -42,7 +56,7 @@ const PostDetail = () => {
       setLikes(likes.filter((l) => l.id !== existingLike.id));
       setHasLiked(false);
     } else {
-      const res = await axios.post('http://localhost:9999/likes', {
+      const res = await axios.post("http://localhost:9999/likes", {
         postId: parseInt(id),
         userId: user.id,
         username: user.username,
@@ -55,7 +69,7 @@ const PostDetail = () => {
 
   const handleCommentSubmit = async () => {
     if (!user || !newComment.trim()) return;
-    const res = await axios.post('http://localhost:9999/comments', {
+    const res = await axios.post("http://localhost:9999/comments", {
       postId: parseInt(id),
       userId: user.id,
       username: user.username,
@@ -63,7 +77,7 @@ const PostDetail = () => {
       createdAt: new Date().toISOString(),
     });
     setComments([...comments, res.data]);
-    setNewComment('');
+    setNewComment("");
   };
 
   if (!post) return <p>Đang tải bài viết...</p>;
@@ -73,18 +87,24 @@ const PostDetail = () => {
       <h2>{post.title}</h2>
       <img src={post.image} alt={post.title} className="img-fluid mb-3" />
       <p>{post.content}</p>
-      <p><strong>Tác giả:</strong> {post.author}</p>
-      <p><strong>Ngày đăng:</strong> {new Date(post.createdAt).toLocaleDateString()}</p>
+      <p>
+        <strong>Tác giả:</strong> {post.author}
+      </p>
+      <p>
+        <strong>Ngày đăng:</strong>{" "}
+        {new Date(post.createdAt).toLocaleDateString()}
+      </p>
 
       <hr />
       <div className="d-flex justify-content-between align-items-center mb-3">
         <button className="btn btn-outline-danger" onClick={handleToggleLike}>
           {hasLiked ? <FaHeart color="red" /> : <FaRegHeart />} {likes.length}
         </button>
-        <span><FaCommentDots /> {comments.length}</span>
+        <span>
+          <FaCommentDots /> {comments.length}
+        </span>
       </div>
 
-      {/* Gửi bình luận */}
       {user && (
         <div className="mb-4">
           <textarea
@@ -99,7 +119,6 @@ const PostDetail = () => {
         </div>
       )}
 
-      {/* Danh sách bình luận */}
       <div>
         <h5>Bình luận</h5>
         {comments.length === 0 ? (
@@ -107,7 +126,7 @@ const PostDetail = () => {
         ) : (
           comments.map((comment) => (
             <div key={comment.id} className="border-bottom py-2">
-              <strong>{comment.username}</strong> —{' '}
+              <strong>{comment.username}</strong> —{" "}
               <small className="text-muted">
                 {new Date(comment.createdAt).toLocaleString()}
               </small>
@@ -116,6 +135,38 @@ const PostDetail = () => {
           ))
         )}
       </div>
+
+      {/* Phần bài viết liên quan */}
+      {relatedPosts.length > 0 && (
+        <>
+          <hr />
+          <h5>Bài viết liên quan</h5>
+          <div className="row row-cols-1 row-cols-md-3 g-3">
+            {relatedPosts.map((rp) => (
+              <div key={rp.id} className="col">
+                <div className="card h-100 shadow-sm">
+                  <img
+                    src={rp.image}
+                    className="card-img-top"
+                    alt={rp.title}
+                    style={{ height: "150px", objectFit: "cover" }}
+                  />
+                  <div className="card-body d-flex flex-column">
+                    <h6 className="card-title">{rp.title}</h6>
+                    <p className="card-text text-truncate">{rp.content}</p>
+                    <button
+                      className="btn btn-sm btn-primary mt-auto"
+                      onClick={() => navigate(`/post/${rp.id}`)}
+                    >
+                      Xem chi tiết
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 };
