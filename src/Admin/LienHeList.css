@@ -1,0 +1,70 @@
+.contact-management {
+  margin-left: 240px; /* Dịch sang phải để tránh đè sidebar */
+  padding: 30px 40px;
+  background-color: #f4f6f9;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.contact-management h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.contact-management table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.contact-management th,
+.contact-management td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.contact-management th {
+  background-color: #17a2b8;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.contact-management tr:hover {
+  background-color: #f1f1f1;
+}
+
+.contact-management .wrap-text {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 300px;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-delete:hover {
+  background-color: #c82333;
+}
+
+.contact-footer {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666;
+  text-align: right;
+  padding-right: 10px;
+}

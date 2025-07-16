@@ -1,0 +1,80 @@
+.dashboard {
+  margin-left: 220px; /* khoảng trống cho sidebar */
+  padding: 40px 60px;
+  background-color: #f8f9fc;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #343a40;
+  font-size: 28px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* CARD STYLES */
+.card {
+  border-radius: 16px;
+  padding: 20px;
+  color: white;
+  background-color: #6c757d;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+  min-height: 180px;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-icon {
+  font-size: 28px;
+}
+
+.card-label {
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 10px;
+  flex-grow: 1;
+  text-align: right;
+}
+
+.card-value {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.card-link {
+  text-align: center;
+  padding: 8px 16px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+.card-link:hover {
+  background-color: rgba(255, 255, 255, 0.35);
+}

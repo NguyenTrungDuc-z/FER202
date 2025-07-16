@@ -1,0 +1,81 @@
+.user-management {
+  margin-left: 260px;
+  padding: 30px;
+  background-color: #f4f6f9;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.user-management h2 {
+  margin-bottom: 25px;
+  color: #333;
+  text-align: center;
+}
+
+.user-management table {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.user-management th,
+.user-management td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.user-management th {
+  background-color: #007bff;
+  color: white;
+  text-transform: uppercase;
+}
+
+.user-management tr:hover {
+  background-color: #f1f1f1;
+}
+
+.user-management .active {
+  color: green;
+  font-weight: bold;
+}
+
+.user-management .banned {
+  color: red;
+  font-weight: bold;
+}
+
+/* Nút Cấm */
+.user-management button.cam {
+  background-color: #dc3545; /* đỏ */
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Nút Mở */
+.user-management button.mo {
+  background-color: #28a745; /* xanh lá */
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.user-management button.cam:hover {
+  background-color: #c82333;
+}
+
+.user-management button.mo:hover {
+  background-color: #218838;
+}
