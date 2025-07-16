@@ -1,1242 +1,392 @@
 {
   "users": [
     {
-      "id": "d45e",
+      "id": 1,
       "username": "admin1",
       "password": "1234567",
       "email": "admin@gmail.com",
       "firstname": "Hứa",
       "lastname": "Hẹn",
       "phone": "0987654321"
+    },
+    {
+      "id": 2,
+      "username": "HaiMit",
+      "password": "123456",
+      "email": "HaiLo@gmail.com",
+      "firstname": "Hải ",
+      "lastname": "Lọ",
+      "phone": "099999999",
+      "role": "user"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Lập trình web",
+      "description": "Các bài viết về phát triển web frontend và backend",
+      "createdAt": "2025-01-01T00:00:00Z"
+    },
+    {
+      "id": 2,
+      "name": "Lập trình backend",
+      "description": "Các bài viết về phát triển server-side",
+      "createdAt": "2025-01-01T00:00:00Z"
+    },
+    {
+      "id": 3,
+      "name": "DevOps",
+      "description": "Các bài viết về DevOps và deployment",
+      "createdAt": "2025-01-01T00:00:00Z"
+    },
+    {
+      "id": 4,
+      "name": "Lập trình Java",
+      "description": "Các bài viết về ngôn ngữ lập trình Java",
+      "createdAt": "2025-01-01T00:00:00Z"
+    },
+    {
+      "id": 5,
+      "name": "API",
+      "description": "Các bài viết về API development",
+      "createdAt": "2025-01-01T00:00:00Z"
+    },
+    {
+      "id": 6,
+      "name": "Lập trình",
+      "description": "Các bài viết về lập trình tổng quát",
+      "createdAt": "2025-01-01T00:00:00Z"
     }
   ],
   "posts": [
     {
-      "title": "China tightens internet controls with new centralized form of virtual ID",
-      "link": "https://www.cnn.com/2025/06/20/tech/china-censorship-internet-id-hnk-intl",
-      "snippet": "Since Chinese leader Xi Jinping took power in 2012, the country has further tightened its grip on the digital space through an army of censors.",
-      "photo_url": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-1239636217.jpg?c=16x9&q=h_833,w_1480,c_fill",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNWFkMWhGVkRaTlpVOUZaelZJVFJDZkF4amlCU2dLTWdZeEpJNXdIUWc=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-20T22:00:00.000Z",
-      "authors": [],
-      "source_url": "https://www.cnn.com",
-      "source_name": "CNN",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.cnn.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqIAgKIhpDQklTRFFnTWFna0tCMk51Ymk1amIyMG9BQVAB",
-      "related_topics": [],
-      "id": "d9a1"
+      "id": 1,
+      "title": "Hướng dẫn sử dụng React",
+      "content": "React là một thư viện JavaScript mạnh mẽ để xây dựng giao diện người dùng. Trong bài viết này, chúng ta sẽ đi qua các khái niệm cơ bản của React và cách xây dựng một ứng dụng React từ đầu.",
+      "author": "Nguyễn Văn A",
+      "userId": 1,
+      "categoryId": 1,
+      "createdAt": "2025-06-18T12:00:00Z",
+      "updatedAt": "2025-06-18T12:00:00Z",
+      "image": "https://th.bing.com/th/id/OIP.xgCt4TxCodzVqPtNsLSZWQHaEV?w=288&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+      "tags": [
+        "React",
+        "JavaScript",
+        "Frontend",
+        "Web Development"
+      ],
+      "views": 150,
+      "status": "published"
+      
     },
     {
-      "title": "Internet users advised to change passwords after 16bn logins exposed",
-      "link": "https://www.theguardian.com/technology/2025/jun/21/internet-users-advised-to-change-passwords-after-16bn-logins-exposed",
-      "snippet": "Hacked credentials could give cybercriminals access to Facebook, Meta and Google accounts among others.",
-      "photo_url": "https://i.guim.co.uk/img/media/6a7b8b4e74e67dd34f2a93f775050d0f7e3529b3/574_0_3559_2847/master/3559.jpg?width=465&dpr=1&s=none&crop=none",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iL0NnNUVSa0ZtUm5CdlVFaExlVlUxVFJEMEFoalJBeWdLTWdtVkZJZ0pFaWRzcndF=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-21T16:15:00.000Z",
-      "authors": [
-        "Dan Milmo"
+      "id": 2,
+      "title": "Giới thiệu về Vue.js",
+      "content": "Vue.js là một framework JavaScript tiến bộ cho xây dựng giao diện người dùng. Vue.js được thiết kế để dễ dàng tiếp cận và tích hợp vào các dự án hiện có.",
+      "author": "Phạm Minh K",
+      "userId": 3,
+      "categoryId": 1,
+      "createdAt": "2025-06-18T15:00:00Z",
+      "updatedAt": "2025-06-18T15:00:00Z",
+      "image": "",
+      "tags": [
+        "Vue.js",
+        "JavaScript",
+        "Frontend",
+        "Web Development"
       ],
-      "source_url": "https://www.theguardian.com",
-      "source_name": "The Guardian",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.theguardian.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqKggKIiRDQklTRlFnTWFoRUtEM1JvWldkMVlYSmthV0Z1TG1OdmJTZ0FQAQ",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtTUY4M2RqWmZlaElDWlc0b0FBUAE",
-          "topic_name": "Dan Milmo"
-        }
-      ],
-      "id": "0caf"
+      "views": 120,
+      "status": "published"
     },
     {
-      "title": "The Entire Internet Is Reverting to Beta",
-      "link": "https://www.theatlantic.com/technology/archive/2025/06/ai-janky-web/683228/",
-      "snippet": "The AI takeover is changing everything about the web—and not necessarily for the better.",
-      "photo_url": "https://cdn.theatlantic.com/thumbor/IZZ4681-XFDf6DW6AvqNrxjrAr4=/0x0:8333x4687/960x540/media/img/mt/2025/06/2025_06_16_Wong_Janky_Web_final3_01/original.jpg",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNVJYM0E1UW5kUlNtMDViV2RNVFJDZkF4ampCU2dLTWdZQlFJamhQZ1U=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-18T20:09:29.000Z",
-      "authors": [
-        "Matteo Wong"
+      "id": 3,
+      "title": "Node.js cho người mới bắt đầu",
+      "content": "Node.js là một môi trường chạy JavaScript phía server, được tối ưu hóa cho các ứng dụng yêu cầu hiệu suất cao và khả năng mở rộng.",
+      "author": "Hoàng Minh X",
+      "userId": 4,
+      "categoryId": 2,
+      "createdAt": "2025-06-18T18:00:00Z",
+      "updatedAt": "2025-06-18T18:00:00Z",
+      "image": "https://th.bing.com/th/id/OIP.VOGG10_elQyWEert_a0N5wHaD4?w=279&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+      "tags": [
+        "Node.js",
+        "JavaScript",
+        "Backend",
+        "Server"
       ],
-      "source_url": "https://www.theatlantic.com",
-      "source_name": "The Atlantic",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.theatlantic.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqKggKIiRDQklTRlFnTWFoRUtEM1JvWldGMGJHRnVkR2xqTG1OdmJTZ0FQAQ",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZzWjE4ME9XTmZNQklDWlc0b0FBUAE",
-          "topic_name": "Matteo Wong"
-        }
-      ],
-      "id": "6203"
+      "views": 200,
+      "status": "published"
     },
     {
-      "title": "The Internet as We Knew It Is Over. The Only Thing Left Is to Go Outside.",
-      "link": "https://slate.com/technology/2025/06/summer-2025-internet-log-off-touch-grass-summer.html",
-      "snippet": "There's a purpose to being online, but the fun of it has been drained. Take it from an internet addict now in rueful repair: This is the summer ...",
-      "photo_url": "https://compote.slate.com/images/9745d89b-7edd-4896-8b17-fc03b1838fce.jpeg?crop=1560%2C1040%2Cx0%2Cy0",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNXVaVzVtYkVoMmEwbHhZMkZRVFJERUF4aW1CU2dLTWdZUlVJWUpOZ1U=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-20T09:40:00.000Z",
-      "authors": [
-        "Scaachi Koul"
+      "id": 4,
+      "title": "Lập trình với Python: Một hướng dẫn cơ bản",
+      "content": "Python là một ngôn ngữ lập trình phổ biến nhờ vào cú pháp dễ hiểu và khả năng ứng dụng rộng rãi trong nhiều lĩnh vực khác nhau.",
+      "author": "Trần Thiên A",
+      "userId": 5,
+      "categoryId": 6,
+      "createdAt": "2025-06-19T10:00:00Z",
+      "updatedAt": "2025-06-19T10:00:00Z",
+      "image": "https://th.bing.com/th/id/OIP.ROi5nbHuWNU4XrJ1na8HUgHaEK?w=296&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+      "tags": [
+        "Python",
+        "Programming",
+        "Beginner",
+        "Tutorial"
       ],
-      "source_url": "https://slate.com",
-      "source_name": "Slate Magazine",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://slate.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqIggKIhxDQklTRHdnTWFnc0tDWE5zWVhSbExtTnZiU2dBUAE",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZqTm14dFpGODVZaElDWlc0b0FBUAE",
-          "topic_name": "Scaachi Koul"
-        }
-      ],
-      "id": "8dbc"
+      "views": 180,
+      "status": "published"
     },
     {
-      "title": "Why am I filled with nostalgia for a pre-internet age I never knew? | Isabel Brooks",
-      "link": "https://www.theguardian.com/commentisfree/2025/may/31/internet-age-young-people-world-phones",
-      "snippet": "Social media has sped up trend cycles, resulting in an eerie uniformity across styles and personalities: we buy the same products, wear the same ...",
-      "photo_url": "https://i.guim.co.uk/img/media/cf8a2661605eeb583e9b1469979d3ef895945700/0_0_5000_4000/master/5000.jpg?width=465&dpr=1&s=none&crop=none",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNW1SRWhMTlZZeFREUk9NRXRSVFJEMEFoalJBeWdLTWdZaFJJYXVvUVE=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-01T07:00:00.000Z",
-      "authors": [
-        "Isabel Brooks"
+      "id": 5,
+      "title": "Tìm hiểu về TypeScript",
+      "content": "TypeScript là một superset của JavaScript, bổ sung khả năng kiểm tra kiểu tĩnh, giúp lập trình viên phát hiện lỗi sớm và cải thiện chất lượng mã nguồn.",
+      "author": "Nguyễn Thiện L",
+      "userId": 1,
+      "categoryId": 1,
+      "createdAt": "2025-06-19T12:30:00Z",
+      "updatedAt": "2025-06-19T12:30:00Z",
+      "image": "https://th.bing.com/th/id/OIP.7cwsgCBxqiMI9hKRj7emwAHaEK?w=297&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+      "tags": [
+        "TypeScript",
+        "JavaScript",
+        "Frontend",
+        "Web Development"
       ],
-      "source_url": "https://www.theguardian.com",
-      "source_name": "The Guardian",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.theguardian.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqKggKIiRDQklTRlFnTWFoRUtEM1JvWldkMVlYSmthV0Z1TG1OdmJTZ0FQAQ",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEYyY1dKc1pEZzVjQklDWlc0b0FBUAE",
-          "topic_name": "Isabel Brooks"
-        }
-      ],
-      "id": "22b9"
+      "views": 95,
+      "status": "published"
     },
     {
-      "title": "The internet of agents is rising fast, and publishers are nowhere near ready",
-      "link": "https://www.fastcompany.com/91354919/internet-of-agents-rising-fast-publishers",
-      "snippet": "New data reveals AI search engines are quietly ignoring previous access standards and the media will ultimately pay a steep price.",
-      "photo_url": "https://images.fastcompany.com/image/upload/f_webp,c_fit,w_1920,q_auto/wp-cms-2/2025/06/p-91354919-the-internet-of-agents.jpg",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iJ0NnNURjR2RuYTFwVVV6Rm1RbkZMVFJDZkF4ampCU2dLTWdPbEV4SQ=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T09:08:45.000Z",
-      "authors": [
-        "Pete Pachal"
+      "id": 6,
+      "title": "Kỹ thuật lập trình hướng đối tượng trong Java",
+      "content": "Lập trình hướng đối tượng (OOP) giúp tổ chức mã nguồn rõ ràng, dễ bảo trì, và dễ mở rộng. Đây là một trong những phương pháp phổ biến nhất trong phát triển phần mềm.",
+      "author": "Phạm Duy T",
+      "userId": 2,
+      "categoryId": 4,
+      "createdAt": "2025-06-19T14:00:00Z",
+      "updatedAt": "2025-06-19T14:00:00Z",
+      "image": "https://th.bing.com/th/id/OIP.aTBfCU3qUo72t0mbhEmnowHaEo?w=253&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+      "tags": [
+        "Java",
+        "OOP",
+        "Programming",
+        "Software Design"
       ],
-      "source_url": "https://www.fastcompany.com",
-      "source_name": "Fast Company",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.fastcompany.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqKggKIiRDQklTRlFnTWFoRUtEMlpoYzNSamIyMXdZVzU1TG1OdmJTZ0FQAQ",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtTURGalltaHFjQklDWlc0b0FBUAE",
-          "topic_name": "Pete Pachal"
-        }
-      ],
-      "id": "e079"
+      "views": 110,
+      "status": "published"
     },
     {
-      "title": "Metronet Lights Up Kokomo with 100% Fiber-Optic Internet",
-      "link": "https://www.businesswire.com/news/home/20250623994750/en/Metronet-Lights-Up-Kokomo-with-100-Fiber-Optic-Internet",
-      "snippet": "Metronet today announced that it has begun to light up its new residential fiber-optic network in Kokomo, Ind. Homes in initial construction ...",
-      "photo_url": "https://mms.businesswire.com/media/20250623994750/en/2503656/22/Metronet_Logotype_wTag_RGB.jpg",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNXlSaTFIU0d4NlFVWXpXbWM1VFJDSEF4aVBCaWdLTWdZQmtKS3ZPQVk=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T14:17:00.000Z",
-      "authors": [],
-      "source_url": "https://www.businesswire.com",
-      "source_name": "Business Wire",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.businesswire.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqLAgKIiZDQklTRmdnTWFoSUtFR0oxYzJsdVpYTnpkMmx5WlM1amIyMG9BQVAB",
-      "related_topics": [],
-      "id": "48e3"
+      "id": 7,
+      "title": "Xây dựng ứng dụng với Angular",
+      "content": "Angular là một framework mạnh mẽ giúp xây dựng các ứng dụng web động với các tính năng mạnh mẽ như routing, two-way data binding, và nhiều công cụ hỗ trợ.",
+      "author": "Nguyễn Quang K",
+      "userId": 3,
+      "categoryId": 1,
+      "createdAt": "2025-06-19T15:30:00Z",
+      "updatedAt": "2025-06-19T15:30:00Z",
+      "image": "",
+      "tags": [
+        "Angular",
+        "Frontend",
+        "Web Development",
+        "TypeScript"
+      ],
+      "views": 85,
+      "status": "published"
     },
     {
-      "title": "Digitalizing Malawi to improve access to education, public services, and income opportunities",
-      "link": "http://www.worldbank.org/en/results/2025/06/23/digitalizing-afe-malawi-to-improve-access-to-education-public-services-and-income-opportunities",
-      "snippet": "Over 83,000 students from 81 higher learning institutions in Malawi gained access to cheaper and reliable internet connectivity. malawi.",
-      "photo_url": "https://worldbank.scene7.com/is/image/worldbankprod/YILINASE-AVS?fit=constrain,1&wid=396&hei=223",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iL0NnNUhSREJIVTNkelpXcHZlV0UxVFJDb0FSaXJBaWdCTWdtRmNJcHZQYVd4andF=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T19:08:44.000Z",
-      "authors": [],
-      "source_url": "http://www.worldbank.org",
-      "source_name": "World Bank",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn0.gstatic.com/faviconV2?url=http://www.worldbank.org&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqKAgKIiJDQklTRXdnTWFnOEtEWGR2Y214a1ltRnVheTV2Y21jb0FBUAE",
-      "related_topics": [],
-      "id": "181b"
+      "id": 8,
+      "title": "Học cách sử dụng Docker trong DevOps",
+      "content": "Docker là công cụ giúp tạo ra các môi trường phát triển và triển khai phần mềm một cách dễ dàng và hiệu quả, đặc biệt trong các quy trình DevOps.",
+      "author": "Lê Thanh S",
+      "userId": 4,
+      "categoryId": 3,
+      "createdAt": "2025-06-19T17:00:00Z",
+      "updatedAt": "2025-06-19T17:00:00Z",
+      "image": "",
+      "tags": [
+        "Docker",
+        "DevOps",
+        "Containerization",
+        "Cloud"
+      ],
+      "views": 130,
+      "status": "published"
     },
     {
-      "title": "Participants from 170 countries meet in Norway for the annual Internet Governance Forum",
-      "link": "https://www.coe.int/en/web/portal/-/participants-from-170-countries-meet-in-norway-for-the-annual-internet-governance-forum",
-      "snippet": "The Council of Europe is taking part in the 20th UN Internet Governance Forum (IGF) in Lillestrøm, Norway (23-27 June), focusing on ensuring ...",
-      "photo_url": "https://www.coe.int/documents/16695/0/0/f9e20f37-2549-abd6-79e9-27cbdb8225e9",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNHdVMloyUkRacE1EaEJRbTV1VFJDZkF4ampCU2dLTWdZQk00aHdHUW8=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T15:56:41.000Z",
-      "authors": [],
-      "source_url": "https://www.coe.int",
-      "source_name": "coe.int",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.coe.int&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqIAgKIhpDQklTRFFnTWFna0tCMk52WlM1cGJuUW9BQVAB",
-      "related_topics": [],
-      "id": "81a4"
+      "id": 9,
+      "title": "Giới thiệu về GraphQL",
+      "content": "GraphQL là một ngôn ngữ truy vấn API giúp thay thế các REST API truyền thống với khả năng truy vấn linh hoạt hơn và chỉ lấy dữ liệu cần thiết.",
+      "author": "Trần Quang H",
+      "userId": 5,
+      "categoryId": 5,
+      "createdAt": "2025-06-19T18:30:00Z",
+      "updatedAt": "2025-06-19T18:30:00Z",
+      "image": "",
+      "tags": [
+        "GraphQL",
+        "API",
+        "Web Development",
+        "Backend"
+      ],
+      "views": 75,
+      "status": "published"
     },
     {
-      "title": "Snapshot: The latest internet satellite permits in Latin America",
-      "link": "https://www.bnamericas.com/en/news/snapshot-the-latest-internet-satellite-permits-in-latin-america",
-      "snippet": "On Monday, a second batch of 27 Kuiper internet satellites reached low-earth orbit. New satellite licenses in Latin America are also being ...",
-      "photo_url": "https://cdn-www.bnamericas.com/img/sectors/ict_2.jpg",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iJ0NnNDJNR1l5ZVV4cmJuTnFSVmh0VFJDcUJCaXFCQ2dLTWdNQkF3NA=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T21:28:04.000Z",
-      "authors": [],
-      "source_url": "https://www.bnamericas.com",
-      "source_name": "BNamericas",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.bnamericas.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqKQgKIiNDQklTRkFnTWFoQUtEbUp1WVcxbGNtbGpZWE11WTI5dEtBQVAB",
-      "related_topics": [],
-      "id": "a339"
+      "id": 10,
+      "title": "Cách tối ưu hóa mã nguồn JavaScript",
+      "content": "Tối ưu hóa mã nguồn JavaScript giúp giảm thiểu thời gian tải trang và nâng cao trải nghiệm người dùng, đặc biệt quan trọng với các ứng dụng web quy mô lớn.",
+      "author": "Phạm Thiên L",
+      "userId": 1,
+      "categoryId": 6,
+      "createdAt": "2025-06-19T20:00:00Z",
+      "updatedAt": "2025-06-19T20:00:00Z",
+      "image": "",
+      "tags": [
+        "JavaScript",
+        "Optimization",
+        "Performance",
+        "Web Development"
+      ],
+      "views": 160,
+      "status": "published"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "postId": 1,
+      "userId": 3,
+      "username": "jane_smith",
+      "content": "Bài viết rất hữu ích, cảm ơn tác giả!",
+      "createdAt": "2025-06-18T13:00:00Z"
     },
     {
-      "title": "Spectrum Internet: Unlimited, no-contract home Wi-Fi",
-      "link": "https://www.usatoday.com/story/tech/internet/spectrum-internet-plans/84263165007/",
-      "snippet": "Spectrum Internet® Advantage: Start at $30 a month for download speeds of 100 Mbps and upload speeds of 20 Mbps. Spectrum Internet® Premier: ...",
-      "photo_url": "https://www.usatoday.com/gcdn/authoring/authoring-images/2025/06/23/USAT/84316785007-getty-images-2218271327.jpg?width=660&height=440&fit=crop&format=pjpg&auto=webp",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNVdXbTlXVFRjM05GYzVRMnRuVFJDNEF4aVVCU2dLTWdhcE5Zek5HUW8=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T19:33:46.000Z",
-      "authors": [],
-      "source_url": "https://www.usatoday.com",
-      "source_name": "USA Today",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.usatoday.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqJggKIiBDQklTRWdnTWFnNEtESFZ6WVhSdlpHRjVMbU52YlNnQVAB",
-      "related_topics": [],
-      "id": "b1e3"
+      "id": 2,
+      "postId": 1,
+      "userId": 4,
+      "username": "developer_abc",
+      "content": "Mình không hiểu đoạn này, bạn có thể giải thích thêm không?",
+      "createdAt": "2025-06-18T14:00:00Z"
     },
     {
-      "title": "Elon Musk Raises Eyebrows With Bold Plan to Rewrite the Internet",
-      "link": "https://tech.yahoo.com/ai/articles/elon-musk-raises-eyebrows-bold-081541875.html",
-      "snippet": "Elon Musk has never been shy about disrupting established systems, and now he says it's time to overhaul humanity's collective knowledge, ...",
-      "photo_url": "https://s.yimg.com/ny/api/res/1.2/OnKvAsNUWiQ4RalnHbtw.w--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD04Mjg-/https://media.zenfs.com/en/men_s_journal_718/39b45fb3652162d2e6204cff0995f76f",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNU5RMmRrWDBveE1UbExRa1pCVFJERUF4aW1CU2dLTWdhcFpZek9MUVk=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-22T08:15:41.000Z",
-      "authors": [],
-      "source_url": "https://tech.yahoo.com",
-      "source_name": "Yahoo",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://tech.yahoo.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqKQgKIiNDQklTRkFnTWFoQUtEblJsWTJndWVXRm9iMjh1WTI5dEtBQVAB",
-      "related_topics": [],
-      "id": "f91d"
+      "id": 3,
+      "postId": 2,
+      "userId": 1,
+      "username": "john_doe",
+      "content": "Tôi đã sử dụng Vue.js và cảm thấy rất dễ sử dụng, nhưng không chắc về hiệu suất.",
+      "createdAt": "2025-06-18T16:00:00Z"
     },
     {
-      "title": "Amazon.com remains top internet idea at JPMorgan",
-      "link": "https://www.tipranks.com/news/the-fly/amazon-com-remains-top-internet-idea-at-jpmorgan-thefly",
-      "snippet": "JPMorgan says Amazon.com (AMZN) remains the firm's best internet idea with an Overweight rating and $240 price target. JPMorgan estimates Amazon's U.S. ...",
-      "photo_url": null,
-      "thumbnail_url": null,
-      "published_datetime_utc": "2025-06-23T17:17:26.000Z",
-      "authors": [],
-      "source_url": "https://www.tipranks.com",
-      "source_name": "TipRanks",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.tipranks.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqJggKIiBDQklTRWdnTWFnNEtESFJwY0hKaGJtdHpMbU52YlNnQVAB",
-      "related_topics": [],
-      "id": "36ea"
+      "id": 4,
+      "postId": 2,
+      "userId": 5,
+      "username": "content_creator",
+      "content": "Vue.js tuyệt vời, mình thích cách thức hoạt động của Vuex.",
+      "createdAt": "2025-06-18T17:00:00Z"
     },
     {
-      "title": "Hospitality Wi-Fi Transformed: Cambium Networks ONE Network Delivers Faster, Simpler Guest Internet Access",
-      "link": "https://www.morningstar.com/news/pr-newswire/20250623sf14726/hospitality-wi-fi-transformed-cambium-networks-one-network-delivers-faster-simpler-guest-internet-access",
-      "snippet": null,
-      "photo_url": null,
-      "thumbnail_url": null,
-      "published_datetime_utc": "2025-06-23T10:00:00.000Z",
-      "authors": [],
-      "source_url": "https://www.morningstar.com",
-      "source_name": "Morningstar",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.morningstar.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqKggKIiRDQklTRlFnTWFoRUtEMjF2Y201cGJtZHpkR0Z5TG1OdmJTZ0FQAQ",
-      "related_topics": [],
-      "id": "3c34"
+      "id": 5,
+      "postId": 3,
+      "userId": 2,
+      "username": "admin_master",
+      "content": "Bài viết rất chi tiết, tôi sẽ thử ngay.",
+      "createdAt": "2025-06-18T19:00:00Z"
     },
     {
-      "title": "1 Internet Stock with Impressive Fundamentals and 2 to Turn Down",
-      "link": "https://au.finance.yahoo.com/news/1-internet-stock-impressive-fundamentals-043336266.html",
-      "snippet": "Consumer internet businesses are redefining how people engage with the world by giving them instant connectivity and convenience.",
-      "photo_url": null,
-      "thumbnail_url": null,
-      "published_datetime_utc": "2025-06-23T04:33:36.000Z",
-      "authors": [
-        "Adam Hejl"
-      ],
-      "source_url": "https://au.finance.yahoo.com",
-      "source_name": "Yahoo",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://au.finance.yahoo.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqMQgKIitDQklTR2dnTWFoWUtGR0YxTG1acGJtRnVZMlV1ZVdGb2IyOHVZMjl0S0FBUAE",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtTURGb09XTnNiaElDWlc0b0FBUAE",
-          "topic_name": "Adam Hejl"
-        }
-      ],
-      "id": "aaaf"
+      "id": 6,
+      "postId": 5,
+      "userId": 3,
+      "username": "jane_smith",
+      "content": "Mình đã sử dụng TypeScript trong dự án của mình và cảm thấy rất tiện lợi.",
+      "createdAt": "2025-06-19T13:00:00Z"
     },
     {
-      "title": "New York internet provider enters Baltimore with $100M investment",
-      "link": "https://www.bizjournals.com/baltimore/news/2025/06/23/greenlight-networks-expansion-fiber-internet.html",
-      "snippet": "Greenlight Networks invests $100M to bring fiber optic internet to Baltimore, challenging Comcast's dominance of the local market.",
-      "photo_url": "https://media.bizj.us/view/img/13004377/uc-graphics-2025-06-18t150803074*900xx1920-1080-0-19.png",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNXNkRXhpTFRsb2RVSTJNbFEyVFJDZkF4ampCU2dLTWdZMVFKQllJQWc=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T18:54:00.000Z",
-      "authors": [
-        "Matt Hooke"
-      ],
-      "source_url": "https://www.bizjournals.com",
-      "source_name": "The Business Journals",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.bizjournals.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqKggKIiRDQklTRlFnTWFoRUtEMkpwZW1wdmRYSnVZV3h6TG1OdmJTZ0FQAQ",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZ4Ym1OMlpqTnVOaElDWlc0b0FBUAE",
-          "topic_name": "Matt Hooke"
-        }
-      ],
-      "id": "6ea6"
+      "id": 7,
+      "postId": 7,
+      "userId": 4,
+      "username": "developer_abc",
+      "content": "Angular rất mạnh mẽ nhưng tôi thấy React có vẻ linh hoạt hơn.",
+      "createdAt": "2025-06-19T16:00:00Z"
     },
     {
-      "title": "Amazon launches second batch of Kuiper internet satellites, taking on Elon Musk's Starlink",
-      "link": "https://oodaloop.com/briefs/technology/amazon-launches-second-batch-of-kuiper-internet-satellites-taking-on-elon-musks-starlink/",
-      "snippet": "Amazon's second batch of Kuiper internet satellites reached low Earth orbit on Monday, adding to its plans for a massive constellation and ...",
-      "photo_url": "https://oodaloop.com/wp-content/uploads/2024/10/OODA-Twitter-Card-Large.png",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNXJTM0YwTUdGNVJGcHJYekowVFJDc0FoallCQ2dLTWdhQmdKQ2pNQVk=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T15:52:11.000Z",
-      "authors": [],
-      "source_url": "https://oodaloop.com",
-      "source_name": "oodaloop.com",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://oodaloop.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqJggKIiBDQklTRWdnTWFnNEtERzl2WkdGc2IyOXdMbU52YlNnQVAB",
-      "related_topics": [],
-      "id": "6d5b"
+      "id": 8,
+      "postId": 9,
+      "userId": 1,
+      "username": "john_doe",
+      "content": "GraphQL có thể thay thế REST API, nhưng tôi vẫn thấy REST dễ sử dụng hơn.",
+      "createdAt": "2025-06-19T19:00:00Z"
+    }
+  ],
+  "likes": [
+    {
+      "id": 1,
+      "postId": 1,
+      "userId": 3,
+      "username": "jane_smith",
+      "createdAt": "2025-06-18T13:00:00Z"
     },
     {
-      "title": "MEF brings Layer 2 over Broadband to internet access services and LSO software package",
-      "link": "https://www.telecompaper.com/news/mef-brings-layer-2-over-broadband-to-internet-access-services-and-lso-software-package--1540231",
-      "snippet": "Layer 2 over Broadband will unlock Ethernet access over consumer internet broadband (Access E-Line) in NaaS implementations, along with ...",
-      "photo_url": null,
-      "thumbnail_url": null,
-      "published_datetime_utc": "2025-06-23T14:41:00.000Z",
-      "authors": [],
-      "source_url": "https://www.telecompaper.com",
-      "source_name": "Telecompaper",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.telecompaper.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqLAgKIiZDQklTRmdnTWFoSUtFSFJsYkdWamIyMXdZWEJsY2k1amIyMG9BQVAB",
-      "related_topics": [],
-      "id": "588f"
+      "id": 2,
+      "postId": 1,
+      "userId": 4,
+      "username": "developer_abc",
+      "createdAt": "2025-06-18T14:00:00Z"
     },
     {
-      "title": "Almost half of young people would prefer a world without internet, UK study finds",
-      "link": "https://www.theguardian.com/technology/2025/may/20/almost-half-of-young-people-would-prefer-a-world-without-internet-uk-study-finds",
-      "snippet": "Half of 16- to 21-year-olds support 'digital curfew' and nearly 70% feel worse after using social media.",
-      "photo_url": "https://i.guim.co.uk/img/media/f61ebfc0a740628d20c06b3f25370390a905cecb/25_0_6880_5504/master/6880.jpg?width=465&dpr=1&s=none&crop=none",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNXNaSEpEWjJWSGR6SXhkSE56VFJEMEFoalJBeWdLTWdhUlpveElKZ2c=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-05-20T07:00:00.000Z",
-      "authors": [
-        "Raphael Boyd"
-      ],
-      "source_url": "https://www.theguardian.com",
-      "source_name": "The Guardian",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.theguardian.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqKggKIiRDQklTRlFnTWFoRUtEM1JvWldkMVlYSmthV0Z1TG1OdmJTZ0FQAQ",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEYzYm14b05IbzFaaElDWlc0b0FBUAE",
-          "topic_name": "Raphael Boyd"
-        }
-      ],
-      "id": "cb1f"
+      "id": 3,
+      "postId": 1,
+      "userId": 5,
+      "username": "content_creator",
+      "createdAt": "2025-06-18T15:00:00Z"
     },
     {
-      "title": "YouTube turns 20: How one video at the zoo changed the internet forever",
-      "link": "https://in.mashable.com/digital-culture/96011/youtube-turns-20-how-one-video-at-the-zoo-changed-the-internet-forever",
-      "snippet": "YouTube sparked a digital revolution, but what comes next in an age dominated by AI and short-form content?",
-      "photo_url": "https://sm.mashable.com/t/mashable_in/article/y/youtube-tu/youtube-turns-20-how-one-video-at-the-zoo-changed-the-intern_5ggr.1248.jpg",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNUdMWEEzWTA1R1drNXpUMHRCVFJDb0FSaXNBaWdCTWdhaFFJeXRxUVU=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-22T10:00:00.000Z",
-      "authors": [
-        "Christianna Silva"
-      ],
-      "source_url": "https://in.mashable.com",
-      "source_name": "Mashable India",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://in.mashable.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqKggKIiRDQklTRlFnTWFoRUtEMmx1TG0xaGMyaGhZbXhsTG1OdmJTZ0FQAQ",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtTW1KaVoyd3haQklDWlc0b0FBUAE",
-          "topic_name": "Christianna Silva"
-        }
-      ],
-      "id": "4e6d"
+      "id": 4,
+      "postId": 2,
+      "userId": 1,
+      "username": "john_doe",
+      "createdAt": "2025-06-18T16:00:00Z"
     },
     {
-      "title": "Starlink ups congestion fee to $750 in some states",
-      "link": "https://www.notebookcheck.net/Starlink-ups-congestion-fee-to-750-in-some-states.1042470.0.html",
-      "snippet": "The $750 demand surcharge is now being asked from future Starlink dish buyers for the initial connection in big cities like Seattle, Redmond, or ...",
-      "photo_url": "https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc4/free-starlink-standard-dish-offer84.jpg",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNXhiRFl5VW05dGJqRXdTa1JmVFJEZ0F4aUFCU2dLTWdZaFFwVE5wUWs=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T13:40:00.000Z",
-      "authors": [
-        "Daniel Zlatev"
-      ],
-      "source_url": "https://www.notebookcheck.net",
-      "source_name": "Notebookcheck",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.notebookcheck.net&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqLQgKIidDQklTRndnTWFoTUtFVzV2ZEdWaWIyOXJZMmhsWTJzdWJtVjBLQUFQAQ",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEYzZDJKd2JERjJNQklDWlc0b0FBUAE",
-          "topic_name": "Daniel Zlatev"
-        }
-      ],
-      "id": "48f5"
+      "id": 5,
+      "postId": 2,
+      "userId": 5,
+      "username": "content_creator",
+      "createdAt": "2025-06-18T17:00:00Z"
     },
     {
-      "title": "The Kids Online Safety Act Will Make the Internet Worse for Everyone",
-      "link": "https://www.eff.org/deeplinks/2025/05/kids-online-safety-act-will-make-internet-worse-everyone",
-      "snippet": "KOSA relies heavily on vague, subjective harms like “compulsive usage.” The bill defines it as repetitive online behavior that disrupts life ...",
-      "photo_url": "https://www.eff.org/files/styles/teaser/public/banner_library/student-privacy-og.png?itok=JJNqcx3w",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iL0NnNXlZMnh1UWxodmNsZFpibTlpVFJDZkFSaS1BaWdCTWdraFE0U01UZU56YUFJ=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-05-15T07:00:00.000Z",
-      "authors": [
-        "Joe Mullin"
-      ],
-      "source_url": "https://www.eff.org",
-      "source_name": "Electronic Frontier Foundation",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.eff.org&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqIAgKIhpDQklTRFFnTWFna0tCMlZtWmk1dmNtY29BQVAB",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtZVhZM09XUXdiaElDWlc0b0FBUAE",
-          "topic_name": "Joe Mullin"
-        }
-      ],
-      "id": "ccb5"
+      "id": 6,
+      "postId": 3,
+      "userId": 2,
+      "username": "admin_master",
+      "createdAt": "2025-06-18T19:00:00Z"
     },
     {
-      "title": "What Is 5G Home Internet and Is It Good Enough for Your Home?",
-      "link": "https://www.cnet.com/home/internet/what-is-5g-home-internet-is-it-good-enough-for-your-home/",
-      "snippet": "Are broadband options limited around you? Perhaps you're just tired of your current provider? Here's what 5G home internet offers.",
-      "photo_url": "https://www.cnet.com/a/img/resize/c7271a710313729b6879754bc8aa134ad7587385/hub/2024/05/19/199ed588-0412-4fb3-bab0-c511166196f8/5g.jpg?auto=webp&fit=crop&height=675&width=1200",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNUVWSE5zUW5ORlVqWkpXVUZ4VFJDZkF4ampCU2dLTWdZZFFaU09yUWM=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-11T07:00:00.000Z",
-      "authors": [
-        "Trey Paul"
-      ],
-      "source_url": "https://www.cnet.com",
-      "source_name": "CNET",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.cnet.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqIQgKIhtDQklTRGdnTWFnb0tDR051WlhRdVkyOXRLQUFQAQ",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtTUhsdGVuRmpNaElDWlc0b0FBUAE",
-          "topic_name": "Trey Paul"
-        }
-      ],
-      "id": "63f4"
+      "id": 7,
+      "postId": 3,
+      "userId": 1,
+      "username": "john_doe",
+      "createdAt": "2025-06-18T20:00:00Z"
     },
     {
-      "title": "Update: Chinese premier signs decree unveiling tax-related information rules concerning internet platform companies",
-      "link": "https://english.news.cn/20250623/cfb6110650a4456cab826ec7db15bbb7/c.html",
-      "snippet": "Update: Chinese premier signs decree unveiling tax-related information rules concerning internet platform companies-",
-      "photo_url": "https://english.news.cn/20250623/cfb6110650a4456cab826ec7db15bbb7/20250623cfb6110650a4456cab826ec7db15bbb7_XxjwshE007066_20250623_CBMFN0A001.png",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNUdZbWhLTkVSNk5sQjBNV1ptVFJDM0FSaVVBaWdCTWdZWms1YU10UWM=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T12:40:15.000Z",
-      "authors": [],
-      "source_url": "https://english.news.cn",
-      "source_name": "Xinhua News",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://english.news.cn&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqKggKIiRDQklTRlFnTWFoRUtEMlZ1WjJ4cGMyZ3VibVYzY3k1amJpZ0FQAQ",
-      "related_topics": [],
-      "id": "d2d8"
+      "id": 8,
+      "postId": 4,
+      "userId": 3,
+      "username": "jane_smith",
+      "createdAt": "2025-06-19T11:00:00Z"
     },
     {
-      "title": "Maybe AI Slop Is Killing the Internet, After All",
-      "link": "https://www.bloomberg.com/news/articles/2025-05-08/maybe-ai-slop-is-killing-the-internet-after-all",
-      "snippet": "Low-quality AI art has become prevalent enough online that observers have given this kind of content its own name: slop. In some cases, the ...",
-      "photo_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iFhYdLelIXNs/v0/-1x-1.webp",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iL0NnNVRORWN3U0Vjek4xRlBjbFJxVFJERUF4aW1CU2dLTWdrQkFJREpsU0s1MXdB=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-05-08T07:00:00.000Z",
-      "authors": [
-        "Issie Lapowsky"
-      ],
-      "source_url": "https://www.bloomberg.com",
-      "source_name": "Bloomberg.com",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.bloomberg.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqKAgKIiJDQklTRXdnTWFnOEtEV0pzYjI5dFltVnlaeTVqYjIwb0FBUAE",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtTUhsd2R6a3lkeElDWlc0b0FBUAE",
-          "topic_name": "Issie Lapowsky"
-        }
-      ],
-      "id": "faf6"
+      "id": 9,
+      "postId": 5,
+      "userId": 4,
+      "username": "developer_abc",
+      "createdAt": "2025-06-19T13:00:00Z"
     },
     {
-      "title": "How the Internet Left 4chan Behind",
-      "link": "https://www.newyorker.com/culture/infinite-scroll/how-the-internet-left-4chan-behind",
-      "snippet": "After a week and a half, 4chan limped back online over the weekend, but an air of embarrassment hung over its return. The hackers had leaked ...",
-      "photo_url": "https://media.newyorker.com/photos/6812376569ed72c4bce75057/4:3/w_2560%2Cc_limit/Chayka_4chan_final.jpg",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNDNORE55TjNoM2NFTk9VVkp1VFJEZ0F4aUFCU2dLTWdZUmdZaU94UVE=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-04-30T07:00:00.000Z",
-      "authors": [
-        "Kyle Chayka"
-      ],
-      "source_url": "https://www.newyorker.com",
-      "source_name": "The New Yorker",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.newyorker.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqKAgKIiJDQklTRXdnTWFnOEtEVzVsZDNsdmNtdGxjaTVqYjIwb0FBUAE",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtTUhsdGNYazVkeElDWlc0b0FBUAE",
-          "topic_name": "Kyle Chayka"
-        }
-      ],
-      "id": "a25e"
-    },
-    {
-      "title": "Raygun's Olympic breaking broke the internet and continues to polarise",
-      "link": "https://www.msn.com/en-au/sport/other/raygun-s-olympic-breaking-broke-the-internet-and-continues-to-polarise/ar-AA1HcGuF",
-      "snippet": "Australia achieved its greatest-ever medal haul at the Paris Olympics, but 12 months on, the enduring memory is of a white, middle-class, 30-something ...",
-      "photo_url": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1HcGuz.img?w=768&h=432&m=6&x=495&y=159&s=117&d=117",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNTJaRE5pVTJSTldHUkxTRUZKVFJDZkF4ampCU2dLTWdZeFk1YVFKUWc=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-22T23:43:25.000Z",
-      "authors": [
-        "Greg Hassall",
-        "Rebecca Armstrong"
-      ],
-      "source_url": "https://www.msn.com",
-      "source_name": "MSN",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.msn.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqIAgKIhpDQklTRFFnTWFna0tCMjF6Ymk1amIyMG9BQVAB",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtZVhreFpqQm1heElDWlc0b0FBUAE",
-          "topic_name": "Greg Hassall"
-        },
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZ4Ym1NNGREWnliQklDWlc0b0FBUAE",
-          "topic_name": "Rebecca Armstrong"
-        }
-      ],
-      "id": "dd21"
-    },
-    {
-      "title": "Future of the Internet Protocol Television Market: Strategic",
-      "link": "https://www.openpr.com/news/4078318/future-of-the-internet-protocol-television-market-strategic",
-      "snippet": "From strategic positioning to investment trends, the study provides clarity on both micro and macroeconomic variables affecting the sector.",
-      "photo_url": "https://cdn.open-pr.com/L/6/L623717570_g.jpg",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNTNWRmhGY1cwdFlYSlBTRWcxVFJDYUF4anRCU2dLTWdZSmNJeEZPZ1U=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T14:21:00.000Z",
-      "authors": [],
-      "source_url": "https://www.openpr.com",
-      "source_name": "openPR.com",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.openpr.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqJAgKIh5DQklTRUFnTWFnd0tDbTl3Wlc1d2NpNWpiMjBvQUFQAQ",
-      "related_topics": [],
-      "id": "dd62"
-    },
-    {
-      "title": "Yes, Your Internet Provider Can Throttle Your Speeds. Here’s How to Make It Stop",
-      "link": "https://www.cnet.com/home/internet/yes-your-internet-provider-can-throttle-your-speeds-here-how-to-make-it-stop/",
-      "snippet": "Slow internet can disrupt your workday, your gaming and even your doctor's appointments. Maybe you've noticed a dip in your upload and ...",
-      "photo_url": "https://www.cnet.com/a/img/resize/7c85f8bc094ef58ebe6f495ba9edbdf3a40ad62c/hub/2025/04/10/035a7506-c52c-4ea2-acb7-74d2e0b03886/gettyimages-1322943745.jpg?auto=webp&fit=crop&height=675&width=1200",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iJ0NnNVVObVZYTVhGRFYzVjBXRU5OVFJDZkF4ampCU2dLTWdNdFl4UQ=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-15T07:00:00.000Z",
-      "authors": [
-        "Cierra Noffke",
-        "Trisha Jandoc"
-      ],
-      "source_url": "https://www.cnet.com",
-      "source_name": "CNET",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.cnet.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqIQgKIhtDQklTRGdnTWFnb0tDR051WlhRdVkyOXRLQUFQAQ",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZ6WHpCZk5UZHhiaElDWlc0b0FBUAE",
-          "topic_name": "Cierra Noffke"
-        },
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZ5Y1hjNU4ybzRYeElDWlc0b0FBUAE",
-          "topic_name": "Trisha Jandoc"
-        }
-      ],
-      "id": "179d"
-    },
-    {
-      "title": "Go Delete Yourself From the Internet. Seriously, Here’s How.",
-      "link": "https://www.wsj.com/tech/personal-tech/personal-information-privacy-deleteme-2ceea2ad",
-      "snippet": "Congrats, you've got your diploma! Now here's how to outsmart the bots that are taking your jobs, and more advice from Joanna Stern's recent ...",
-      "photo_url": "https://images.wsj.net/im-28361642?width=1280&height=853",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNDFkeTFVWWtWQ2EwTmZkeTB0VFJERUF4aW1CU2dLTWdhWlE0QnlZUUk=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-04-20T07:00:00.000Z",
-      "authors": [
-        "Nicole Nguyen"
-      ],
-      "source_url": "https://www.wsj.com",
-      "source_name": "WSJ",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.wsj.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqIAgKIhpDQklTRFFnTWFna0tCM2R6YWk1amIyMG9BQVAB",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEYwTVdnMk1tZzRYeElDWlc0b0FBUAE",
-          "topic_name": "Nicole Nguyen"
-        }
-      ],
-      "id": "178b"
-    },
-    {
-      "title": "Supreme Court May Decide if the Government Can Childproof the Internet",
-      "link": "https://www.aclu.org/news/privacy-technology/supreme-court-may-decide-if-the-government-can-childproof-the-internet",
-      "snippet": "The court will hear arguments about whether a law that requires age-verification before accessing sexual speech online is constitutional.",
-      "photo_url": "https://assets.aclu.org/live/uploads/2025/01/lock-on-ethernet-cable-b-400x267.jpg",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNTRkV3BMZEhWRVJtVnZMVmhHVFJDM0FSaVRBaWdCTWdZVmRJcXd0UVk=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-01-14T08:00:00.000Z",
-      "authors": [
-        "Vera Eidelman",
-        "Sam Lafrance"
-      ],
-      "source_url": "https://www.aclu.org",
-      "source_name": "American Civil Liberties Union",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.aclu.org&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqIQgKIhtDQklTRGdnTWFnb0tDR0ZqYkhVdWIzSm5LQUFQAQ",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtTUY4eE5EVTVOQklDWlc0b0FBUAE",
-          "topic_name": "Vera Eidelman"
-        },
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEY0TURKeE1ISnhZaElDWlc0b0FBUAE",
-          "topic_name": "Sam Lafrance"
-        }
-      ],
-      "id": "df2d"
-    },
-    {
-      "title": "A Look Into the Future: Consumer Internet of Things Market Set",
-      "link": "https://www.openpr.com/news/4078430/a-look-into-the-future-consumer-internet-of-things-market-set",
-      "snippet": "The report delivers an in-depth examination of the Consumer Internet of Things Market, highlighting critical developments in market structure, ...",
-      "photo_url": "https://cdn.open-pr.com/L/6/L623208985_g.jpg",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNWhVWEYzYUhnd01IbHhZMUJJVFJDb0FSaXNBaWdCTWdZSlVJamxwZ2c=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T15:27:00.000Z",
-      "authors": [],
-      "source_url": "https://www.openpr.com",
-      "source_name": "openPR.com",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.openpr.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqJAgKIh5DQklTRUFnTWFnd0tDbTl3Wlc1d2NpNWpiMjBvQUFQAQ",
-      "related_topics": [],
-      "id": "c5c1"
-    },
-    {
-      "title": "This AI Theory Is Sweeping the Internet. Here's What You Need to Know",
-      "link": "https://www.cnet.com/home/internet/what-is-the-dead-internet-theory/",
-      "snippet": "Could artificial intelligence take over the internet? Some members of the online community reckon it already has. This old theory is ...",
-      "photo_url": "https://www.cnet.com/a/img/resize/b851052377c0746f112d44084d04d96facdbd477/hub/2025/04/29/59e42b95-bfa3-4e4c-8a97-61096a870c25/dead-internet-theory-3.jpg?auto=webp&fit=crop&height=675&width=1200",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iL0NnNHRSMVpvZGtGM2JVcGphWGhPVFJDZkF4ampCU2dLTWdraFVJeTJIR2xyclFF=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-15T12:00:00.000Z",
-      "authors": [
-        "Trisha Jandoc"
-      ],
-      "source_url": "https://www.cnet.com",
-      "source_name": "CNET",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.cnet.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqIQgKIhtDQklTRGdnTWFnb0tDR051WlhRdVkyOXRLQUFQAQ",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZ5Y1hjNU4ybzRYeElDWlc0b0FBUAE",
-          "topic_name": "Trisha Jandoc"
-        }
-      ],
-      "id": "cefd"
-    },
-    {
-      "title": "Why I gave up trying to delete myself from the internet",
-      "link": "https://www.economist.com/1843/2024/11/08/why-i-gave-up-trying-to-delete-myself-from-the-internet",
-      "snippet": "Facebook remembers things about me that I wiped from my own memory a long time ago. Since I joined in 2006 I have been invited to 1,920 ...",
-      "photo_url": "https://www.economist.com/cdn-cgi/image/width=1424,quality=80,format=auto/content-assets/images/1843_20241106_1843_ERASING_SELF_01.jpg",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iL0NnNVBPQzF5U0c0d2MwTlJSR3hmVFJER0JCaVBCQ2dLTWdrQkFJVEVGS2RFVWdF=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2024-11-08T08:00:00.000Z",
-      "authors": [
-        "Avantika Chilkoti"
-      ],
-      "source_url": "https://www.economist.com",
-      "source_name": "The Economist",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.economist.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqKAgKIiJDQklTRXdnTWFnOEtEV1ZqYjI1dmJXbHpkQzVqYjIwb0FBUAE",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZ4T1RSeWRtTnhOUklDWlc0b0FBUAE",
-          "topic_name": "Avantika Chilkoti"
-        }
-      ],
-      "id": "6fb0"
-    },
-    {
-      "title": "Pune Crime Files: How a fraudster frequented internet cafes to steal 23 identities, secure bank loans",
-      "link": "https://indianexpress.com/article/cities/pune/crime-files-fraudster-frequented-internet-cafes-for-identity-thefts-secured-loans-rs-50-lakh-10083067/",
-      "snippet": "A finance manager in Pune fell victim to identity theft, discovering a fraudulent loan of Rs 18 lakh taken in his name.",
-      "photo_url": "https://images.indianexpress.com/2025/06/pune-crime-1.jpg",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNWpRWE15U1hKS2FHNUpPWEI0VFJDZkF4ampCU2dLTWdZQjRJYWt5QU0=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T10:57:00.000Z",
-      "authors": [
-        "Sushant Kulkarni"
-      ],
-      "source_url": "https://indianexpress.com",
-      "source_name": "The Indian Express",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://indianexpress.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqLQgKIidDQklTRndnTWFoTUtFV2x1WkdsaGJtVjRjSEpsYzNNdVkyOXRLQUFQAQ",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtTW1ONGFqaDZkaElDWlc0b0FBUAE",
-          "topic_name": "Sushant Kulkarni"
-        }
-      ],
-      "id": "2f12"
-    },
-    {
-      "title": "Elon Musk's Starlink satellite internet service India launch: Check release date, price, plans, speed and more",
-      "link": "https://www.financialexpress.com/life/technology-elon-musks-starlink-satellite-internet-service-india-launch-check-release-date-price-plans-speed-and-more-3889450/",
-      "snippet": "Starlink, currently operational in over 100 nations, is SpaceX's ambitious satellite internet project aimed at transforming global connectivity.",
-      "photo_url": "https://www.financialexpress.com/wp-content/uploads/2025/06/starlink.reutrs.jpg?w=374",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iL0NnNVRlR1l5TVVwRmExRjZVblV3VFJEU0FSajJBaWdLTWdrTm80U21WcUpNelFF=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T04:32:59.000Z",
-      "authors": [],
-      "source_url": "https://www.financialexpress.com",
-      "source_name": "financialexpress.com",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.financialexpress.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqMQgKIitDQklTR2dnTWFoWUtGR1pwYm1GdVkybGhiR1Y0Y0hKbGMzTXVZMjl0S0FBUAE",
-      "related_topics": [],
-      "id": "8f0d"
-    },
-    {
-      "title": "The internet’s hidden gatekeeper is a ‘must have’, not an optional extra",
-      "link": "https://www.itnews.com.au/feature/the-internets-hidden-gatekeeper-is-a-must-have-not-an-optional-extra-618006",
-      "snippet": "It's about ensuring that DNS systems stay secure and making sure they can't be interfered with or used to hide malicious activity. The focus is ...",
-      "photo_url": "https://i.nextmedia.com.au/Utils/ImageResizer.ashx?n=https%3A%2F%2Fi.nextmedia.com.au%2FFeatures%2FDNS.jpg&h=420&w=748&c=0&s=0",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNWhTVlk0YUV0amJVSmFOak4xVFJDN0FSaU9BaWdCTWdhTms0aHdNUVk=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T05:00:00.000Z",
-      "authors": [],
-      "source_url": "https://www.itnews.com.au",
-      "source_name": "iTnews",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.itnews.com.au&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqKAgKIiJDQklTRXdnTWFnOEtEV2wwYm1WM2N5NWpiMjB1WVhVb0FBUAE",
-      "related_topics": [],
-      "id": "139f"
-    },
-    {
-      "title": "Telecom revenue surges; internet base shrinks slightly in Q1 2025: TRAI",
-      "link": "https://www.storyboard18.com/digital/telecom-revenue-surges-internet-base-shrinks-slightly-in-q1-2025-trai-71384.htm",
-      "snippet": "Pay DTH services registered a dip, with active subscribers falling from 58.22 million in December 2024 to 56.92 million in March 2025.",
-      "photo_url": "https://images.storyboard18.com/storyboard18/2025/06/TRAI-2025-06-1c320a044e1b97fe0da9e42822b1a7b4-1019x573.jpg",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNWZaMVJ1TURkT1NWTjJlbWhaVFJDb0FSaXNBaWdCTWdhTnNKS3V2QVk=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T04:04:38.000Z",
-      "authors": [
-        "Yukta Raj"
-      ],
-      "source_url": "https://www.storyboard18.com",
-      "source_name": "Storyboard18",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.storyboard18.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqLAgKIiZDQklTRmdnTWFoSUtFSE4wYjNKNVltOWhjbVF4T0M1amIyMG9BQVAB",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZyY25aek5uSnFlUklDWlc0b0FBUAE",
-          "topic_name": "Yukta Raj"
-        }
-      ],
-      "id": "7095"
-    },
-    {
-      "title": "Jio AX6000 Wi-Fi 6 Router promises high-speed internet, but with a major catch",
-      "link": "https://www.indiatvnews.com/technology/news/jio-ax6000-wi-fi-6-router-promises-high-speed-internet-but-with-a-major-catch-2025-06-23-995824",
-      "snippet": "Designed to deliver up to 6 Gbps of wireless speed, the router supports the Wi-Fi 6 standard, MU-MIMO, and OFDMA, making it ideal for large ...",
-      "photo_url": "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2025/06/elon-musk-reportedly-on-the-verge-of-raising-billions-for-his-ai-company-2025-06-23t113128-1750658491.webp",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNURibU42V0dZd05VVkxYMVoyVFJDZkF4ampCU2dLTWdZQlVJQ21KZ2c=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T06:01:52.000Z",
-      "authors": [
-        "Saumya Nigam"
-      ],
-      "source_url": "https://www.indiatvnews.com",
-      "source_name": "India TV News",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.indiatvnews.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqKggKIiRDQklTRlFnTWFoRUtEMmx1WkdsaGRIWnVaWGR6TG1OdmJTZ0FQAQ",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZ6Ym1aMk1IZGpjQklDWlc0b0FBUAE",
-          "topic_name": "Saumya Nigam"
-        }
-      ],
-      "id": "40f2"
-    },
-    {
-      "title": "Concerns raised for elderly residents living in West Acre as internet outage expected to last until the end of the week",
-      "link": "https://www.lynnnews.co.uk/news/do-we-have-to-wait-for-somebody-to-die-internet-outage-s-9422566/",
-      "snippet": "West Acre has had a total internet outage since Thursday evening, meaning elderly residents with emergency careline machines cannot access the ...",
-      "photo_url": "https://www.lynnnews.co.uk/_media/img/Z6MG3DJF5WGKK15I3KOZ.jpg",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNXJPRkpYVDNJNVVXMDJhbWRDVFJEQUF4aXRCU2dLTWdZRmNJaUpOUVE=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T16:33:00.000Z",
-      "authors": [
-        "Lucy Carter"
-      ],
-      "source_url": "https://www.lynnnews.co.uk",
-      "source_name": "Lynn News",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.lynnnews.co.uk&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqKQgKIiNDQklTRkFnTWFoQUtEbXg1Ym01dVpYZHpMbU52TG5WcktBQVAB",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZ1YmpVeGVqTTBlaElDWlc0b0FBUAE",
-          "topic_name": "Lucy Carter"
-        }
-      ],
-      "id": "98e2"
-    },
-    {
-      "title": "Chinese researchers achieves internet 5 times faster than Starlink using 2-watt laser: Report",
-      "link": "https://timesofindia.indiatimes.com/technology/tech-news/chinese-researchers-achieves-internet-5-times-faster-than-starlink-using-2-watt-laser-report/articleshow/122026384.cms",
-      "snippet": "Chinese scientists have developed a new method for satellite laser communication, achieving 1 gigabit per second data speeds from geostationary ...",
-      "photo_url": "https://static.toiimg.com/thumb/msid-122026385,width-1280,height-720,resizemode-4/122026385.jpg",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNWFZMlpHU0U5YVduZGliVWRQVFJDZkF4ampCU2dLTWdZQk1ZeE1wUVk=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T12:28:00.000Z",
-      "authors": [],
-      "source_url": "https://timesofindia.indiatimes.com",
-      "source_name": "Times of India",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqOggKIjRDQklTSVFnTWFoMEtHM1JwYldWemIyWnBibVJwWVM1cGJtUnBZWFJwYldWekxtTnZiU2dBUAE",
-      "related_topics": [],
-      "id": "30b8"
-    },
-    {
-      "title": "Internet Transactions Act now in effect",
-      "link": "https://www.manilatimes.net/2025/06/24/business/top-business/internet-transactions-act-now-in-effect/2138101",
-      "snippet": "The law gives DTI the authority to issue takedown orders against online listings of illegal goods and services. It also holds owners of digital ...",
-      "photo_url": "https://www.manilatimes.net/manilatimes/uploads/images/2025/06/23/662123.jpg",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNUtOWEJpTkhJMlMzSk9WblpLVFJERUF4aW1CU2dLTWdhdE5aVE9uUWs=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T16:17:00.000Z",
-      "authors": [],
-      "source_url": "https://www.manilatimes.net",
-      "source_name": "The Manila Times",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.manilatimes.net&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqKggKIiRDQklTRlFnTWFoRUtEMjFoYm1sc1lYUnBiV1Z6TG01bGRDZ0FQAQ",
-      "related_topics": [],
-      "id": "9fd1"
-    },
-    {
-      "title": "Bengaluru or Hyderabad, which is better for job hunt for mid-level techies? Internet explodes with rants o",
-      "link": "https://m.economictimes.com/magazines/panache/redditor-calls-hyderabad-job-hunt-tougher-than-bengaluru-internet-explodes-with-rants-on-pay-caps-and-work-woes/articleshow/122018569.cms",
-      "snippet": "A Hyderabad-based techie's Reddit post comparing job search struggles in Hyderabad versus Bengaluru struck a chord with India's developer ...",
-      "photo_url": "https://m.economictimes.com/thumb/msid-122018683,width-1200,height-900,resizemode-4,imgsize-1648084/bengaluru-vs-hyderabad.jpg",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iJ0NnNUdlRVpZYW5OZlVtZFRiMUJhVFJEZ0F4aUFCU2dLTWdNQllBQQ=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T07:01:59.000Z",
-      "authors": [],
-      "source_url": "https://m.economictimes.com",
-      "source_name": "The Economic Times",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://m.economictimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqLQgKIidDQklTRndnTWFoTUtFV1ZqYjI1dmJXbGpkR2x0WlhNdVkyOXRLQUFQAQ",
-      "related_topics": [],
-      "id": "34c2"
-    },
-    {
-      "title": "'We were just trying to get it to work': The failure that started the internet",
-      "link": "https://www.bbc.com/future/article/20241028-the-failure-that-started-the-internet",
-      "snippet": "The first message sent over Arpanet was an inauspicious start to what would grow into the internet (Credit: Emmanuel LaFont).",
-      "photo_url": "https://ichef.bbci.co.uk/images/ic/480xn/p0k0wj4z.jpg.webp",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNUJkM0phWm5sS1ZIRmxRbEY0VFJDT0FoamdBeWdLTWdhdEpJYVFtUWs=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2024-10-29T07:00:00.000Z",
-      "authors": [
-        "Scott Nover"
-      ],
-      "source_url": "https://www.bbc.com",
-      "source_name": "BBC",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.bbc.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqIAgKIhpDQklTRFFnTWFna0tCMkppWXk1amIyMG9BQVAB",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtTUhsM05XSm9NeElDWlc0b0FBUAE",
-          "topic_name": "Scott Nover"
-        }
-      ],
-      "id": "cd16"
-    },
-    {
-      "title": "Broadband to be rolled out to 100,000 homes and businesses",
-      "link": "https://www.bournemouthecho.co.uk/news/25254476.wessex-internet-secures-50m-rollout-rural-broadband/",
-      "snippet": "More than 100,000 rural homes and businesses are set to receive broadband after a £50m investment. Wessex Internet, an independent broadband ...",
-      "photo_url": "https://www.bournemouthecho.co.uk/resources/images/180x180/1x/19602732.jpg",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNTJSMlp2TTBWU2J6WjVTRFk0VFJDMEFSaTBBU2dCTWdZVlZvNUpJZ2s=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T04:00:00.000Z",
-      "authors": [],
-      "source_url": "https://www.bournemouthecho.co.uk",
-      "source_name": "Bournemouth Echo",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.bournemouthecho.co.uk&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqMggKIixDQklTR3dnTWFoY0tGV0p2ZFhKdVpXMXZkWFJvWldOb2J5NWpieTUxYXlnQVAB",
-      "related_topics": [],
-      "id": "1c72"
-    },
-    {
-      "title": "Reddit is ugly and utilitarian – but it’s the best space left on the internet",
-      "link": "https://inews.co.uk/culture/arts/reddit-ugly-utilitarian-but-best-space-left-on-internet-3754906",
-      "snippet": "The social platform is one of the few remaining places safe from capitalism's demands to market yourself as popular, attractive or palatable.",
-      "photo_url": "https://inews.co.uk/wp-content/uploads/2025/06/SEI_256093841.jpg?crop=0px%2C61px%2C1200px%2C677px&resize=1200%2C675",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNUNVekJSZVhCRFozcEhaRWxKVFJDZkF4ampCU2dLTWdhWlFZYlZPQVE=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T05:00:00.000Z",
-      "authors": [
-        "Zing Tsjeng"
-      ],
-      "source_url": "https://inews.co.uk",
-      "source_name": "The i Paper",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://inews.co.uk&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqJQgKIh9DQklTRVFnTWFnMEtDMmx1WlhkekxtTnZMblZyS0FBUAE",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZrWHpoeVptUXhheElDWlc0b0FBUAE",
-          "topic_name": "Zing Tsjeng"
-        }
-      ],
-      "id": "2b21"
-    },
-    {
-      "title": "The internet under attack",
-      "link": "https://www.chathamhouse.org/2024/08/internet-under-attack",
-      "snippet": "Many aspects of modern conflict are increasingly defined by the internet and digital technologies. The concept of resilience is essential to ...",
-      "photo_url": "https://www.chathamhouse.org/sites/default/files/styles/12_6_media_huge/public/2024-08/2024-08-20-taliban-computer-khost-market-1236268890.jpg?h=eaf6d09c&itok=Db63p_su",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNTFOVkJWWWpSbE4yazRWbWxuVFJDZkFSaS1BaWdCTWdheGdJU1hOQVk=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2024-08-23T07:00:00.000Z",
-      "authors": [
-        "James Shires"
-      ],
-      "source_url": "https://www.chathamhouse.org",
-      "source_name": "Chatham House",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.chathamhouse.org&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqLAgKIiZDQklTRmdnTWFoSUtFR05vWVhSb1lXMW9iM1Z6WlM1dmNtY29BQVAB",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZuZUc1MmVXeDBNQklDWlc0b0FBUAE",
-          "topic_name": "James Shires"
-        }
-      ],
-      "id": "bf90"
-    },
-    {
-      "title": "Measuring the Internet of Things",
-      "link": "https://www.oecd.org/en/publications/measuring-the-internet-of-things_021333b7-en.html",
-      "snippet": "This report provides new evidence on how the Internet of Things (IoT) – the inter-networking of physical devices and objects whose state can be ...",
-      "photo_url": "https://www.oecd.org/adobe/dynamicmedia/deliver/dm-aid--2e77a090-f4a7-49eb-8047-673f9cc9d85f/021333b7-en.jpg?preferwebp=true&quality=80",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iJ0NnNXZYMnB1V20xM05FODRjMU5pVFJEWUF4aUpCU2dLTWdNQlV3bw=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2023-10-13T07:00:00.000Z",
-      "authors": [],
-      "source_url": "https://www.oecd.org",
-      "source_name": "OECD",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.oecd.org&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqIQgKIhtDQklTRGdnTWFnb0tDRzlsWTJRdWIzSm5LQUFQAQ",
-      "related_topics": [],
-      "id": "8073"
-    },
-    {
-      "title": "Blackstone consortium completes $5.1bn investment in Rogers Communications’ internet and wireless unit",
-      "link": "https://pe-insights.com/blackstone-consortium-completes-5-1bn-investment-in-rogers-communications-internet-and-wireless-unit/",
-      "snippet": "Blackstone has led a private equity consortium in a $5.1bn equity investment in a newly created subsidiary of Rogers Communications, ...",
-      "photo_url": "https://pe-insights.com/wp-content/uploads/2020/10/BLACKSTONE-1-1024x576.jpg",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNVRjRU5ZVlhjemVrVk1YMEpxVFJDZkF4ampCU2dLTWdZUmNJcW13QVE=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T10:41:03.000Z",
-      "authors": [],
-      "source_url": "https://pe-insights.com",
-      "source_name": "Private Equity Insights",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://pe-insights.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqKggKIiRDQklTRlFnTWFoRUtEM0JsTFdsdWMybG5hSFJ6TG1OdmJTZ0FQAQ",
-      "related_topics": [],
-      "id": "1422"
-    },
-    {
-      "title": "How the AI Boom Is like the Internet Boom (And How It Isn’t)",
-      "link": "https://www.aei.org/articles/how-the-ai-boom-is-like-the-internet-boom-and-how-it-isnt/",
-      "snippet": "Microsoft Chief Executive Satya Nadella's vision of autonomous AI agents sounds transformative: software that plans, executes, and learns across ...",
-      "photo_url": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbbf4e8a8-8c3e-40d2-9711-022319981803_1456x816.jpeg",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNTBkWEV6VTBaaFZGRjFORlV6VFJDb0FSaXNBaWdCTWdZUkI0QnFtZ28=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-16T21:56:15.000Z",
-      "authors": [
-        "James Pethokoukis"
-      ],
-      "source_url": "https://www.aei.org",
-      "source_name": "American Enterprise Institute",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.aei.org&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqIAgKIhpDQklTRFFnTWFna0tCMkZsYVM1dmNtY29BQVAB",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtTURFemJISndPQklDWlc0b0FBUAE",
-          "topic_name": "James Pethokoukis"
-        }
-      ],
-      "id": "b066"
-    },
-    {
-      "title": "Investing in what moves the internet forward",
-      "link": "https://blog.mozilla.org/en/mozilla/building-whats-next/",
-      "snippet": "Our independence means we have to be intentional about where we invest our time and resources so we can make the biggest impact.",
-      "photo_url": "https://blog.mozilla.org/wp-content/blogs.dir/278/files/2025/03/Mozilla-Blog-Thumbnail@2x.png",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNUpYMXBWUWtkQk5HVndWbk5ZVFJDZkF4ampCU2dLTWdZaHBKU011UVk=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-05-22T07:00:00.000Z",
-      "authors": [],
-      "source_url": "https://blog.mozilla.org",
-      "source_name": "blog.mozilla.org",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://blog.mozilla.org&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqLAgKIiZDQklTRmdnTWFoSUtFR0pzYjJjdWJXOTZhV3hzWVM1dmNtY29BQVAB",
-      "related_topics": [],
-      "id": "a504"
-    },
-    {
-      "title": "Tracking how our bodies work could change our lives",
-      "link": "https://www.weforum.org/stories/2020/06/internet-of-bodies-covid19-recovery-governance-health-data/",
-      "snippet": "Tracking how our bodies work could change our lives · Through digital technology, we're better equipped than ever to fight a global pandemic ...",
-      "photo_url": "https://assets.weforum.org/article/image/large_tCdNqbCNczTBWEFuB778zdGZx_1mtytf2f-ka_EWQxw.JPG",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNWlabXB5VjFaeVRqWjNkekpaVFJEc0FoakxCaWdLTWdZZE5vRU40Z0k=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2020-06-04T07:00:00.000Z",
-      "authors": [
-        "Xiao Liu"
-      ],
-      "source_url": "https://www.weforum.org",
-      "source_name": "The World Economic Forum",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.weforum.org&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqJQgKIh9DQklTRVFnTWFnMEtDM2RsWm05eWRXMHViM0puS0FBUAE",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZvWTJSeGQzbG9aQklDWlc0b0FBUAE",
-          "topic_name": "Xiao Liu"
-        }
-      ],
-      "id": "2578"
-    },
-    {
-      "title": "Satellite Internet Expansion: Transforming Global Connectivity",
-      "link": "https://www.wales247.co.uk/satellite-internet-expansion-transforming-global-connectivity",
-      "snippet": "LEO satellites orbit between 340 and 1,200 kilometers above Earth — that's roughly 30 times closer than traditional geostationary satellites.",
-      "photo_url": "https://www.wales247.co.uk/wp-content/uploads/2025/06/247-Featured-Image-1013-scaled.jpg",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNVZVMGRLUjFGNFNGaE5kVXAwVFJDSEF4aVBCaWdLTWdhVmQ1Um9xZ2M=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-22T23:01:11.000Z",
-      "authors": [
-        "Rhys Gregory"
-      ],
-      "source_url": "https://www.wales247.co.uk",
-      "source_name": "Wales 247",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.wales247.co.uk&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqKQgKIiNDQklTRkFnTWFoQUtEbmRoYkdWek1qUTNMbU52TG5WcktBQVAB",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZ5TjNoNU1HNTJaaElDWlc0b0FBUAE",
-          "topic_name": "Rhys Gregory"
-        }
-      ],
-      "id": "f9f2"
-    },
-    {
-      "title": "London Internet Exchange Introduces Service Level Agreements",
-      "link": "https://www.ispreview.co.uk/index.php/2025/06/london-internet-exchange-introduces-service-level-agreements.html",
-      "snippet": "The SLA has been introduced in response to demand from enterprise networks seeking resilient, reliable, and accountable connectivity solutions.",
-      "photo_url": "https://www.ispreview.co.uk/wp-content/uploads/2024/08/nggallery_import/Fibre-optic-broadband-network-with-servers-in-a-UK-data-centre-123RF-69533542.webp",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iL0NnNVhkV0l6ZEc5NVpFdHpTVXRFVFJEVUFSanVBU2dCTWdrUkFJd3FvZVk4Y3dF=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T09:37:00.000Z",
-      "authors": [
-        "Mark Jackson"
-      ],
-      "source_url": "https://www.ispreview.co.uk",
-      "source_name": "ISPreview UK",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.ispreview.co.uk&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqKggKIiRDQklTRlFnTWFoRUtEMmx6Y0hKbGRtbGxkeTVqYnk1MWF5Z0FQAQ",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZ1Ym5SeVp6UnFaaElDWlc0b0FBUAE",
-          "topic_name": "Mark Jackson"
-        }
-      ],
-      "id": "ad72"
-    },
-    {
-      "title": "Bluesky Is Plotting a Total Takeover of the Social Internet",
-      "link": "https://www.wired.com/story/big-interview-jay-graber-bluesky/",
-      "snippet": "A lot of people don't realize that Bluesky is a bit like Reddit and Twitter at the same time, because you can build feeds that are essentially ...",
-      "photo_url": "https://media.wired.com/photos/68251b9ec0fc57ad670eae76/master/w_2560%2Cc_limit/250408-JayGruber-JTamayo-JPEG-SELECTS-03.JPG",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNVZMVlI1VUdSMVNFNXhaRTR0VFJDbUJSakVBeWdLTWdZcFJacXVuUWs=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-05-19T07:00:00.000Z",
-      "authors": [
-        "Kate Knibbs"
-      ],
-      "source_url": "https://www.wired.com",
-      "source_name": "WIRED",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.wired.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqIggKIhxDQklTRHdnTWFnc0tDWGRwY21Wa0xtTnZiU2dBUAE",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtTUhvM2R6RmlNeElDWlc0b0FBUAE",
-          "topic_name": "Kate Knibbs"
-        }
-      ],
-      "id": "622d"
-    },
-    {
-      "title": "South Dakota gets grant to fight internet crimes against kids",
-      "link": "https://brookingsregister.com/stories/south-dakota-gets-grant-to-fight-internet-crimes-against-kids,141263",
-      "snippet": "The AGA grant will be used to purchase equipment and provide training for members of the DCI's Internet Crimes Against Children Task Force. The ...",
-      "photo_url": "https://brookingsregister.com/uploads/original/20240909-160944-46e-BRKG%20PIX%20InternetGeneric2.jpg",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNWZSM1F3WDJOek1UVjFVMnRTVFJERUFSaUNBaWdCTWdZVlpaZ3BLZ2c=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T17:42:00.000Z",
-      "authors": [],
-      "source_url": "https://brookingsregister.com",
-      "source_name": "Brookings Register",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://brookingsregister.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqMggKIixDQklTR3dnTWFoY0tGV0p5YjI5cmFXNW5jM0psWjJsemRHVnlMbU52YlNnQVAB",
-      "related_topics": [],
-      "id": "24e4"
-    },
-    {
-      "title": "6 in 10 people in the world regularly use the Internet",
-      "link": "https://ourworldindata.org/data-insights/6-in-10-people-in-the-world-regularly-use-the-internet",
-      "snippet": "The Internet is one of the world's fastest-growing technologies. In 2010, just 30% of the global population was online.",
-      "photo_url": "https://ourworldindata.org/cdn-cgi/imagedelivery/qLq-8BTgXU8yG0N6HnOy8g/7063e7d2-91e7-4ba9-fd7b-53a51b478500/w=2250",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iL0NnNTRhRlJIYVZkMlIxZ3diekZGVFJDcUJCaXFCQ2dLTWdtQkFaQWhpLXcwN1FF=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2024-07-09T07:00:00.000Z",
-      "authors": [
-        "Hannah Ritchie"
-      ],
-      "source_url": "https://ourworldindata.org",
-      "source_name": "Our World in Data",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://ourworldindata.org&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqLggKIihDQklTR0FnTWFoUUtFbTkxY25kdmNteGthVzVrWVhSaExtOXlaeWdBUAE",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZvTUhsNlpqbDNhQklDWlc0b0FBUAE",
-          "topic_name": "Hannah Ritchie"
-        }
-      ],
-      "id": "d508"
-    },
-    {
-      "title": "Nigeria’s Internet has a border problem. IXPN wants to fix it by 2030",
-      "link": "https://techcabal.com/2025/06/23/ixpn-wants-to-fix-nigerias-internet-border-problem-by-2030/",
-      "snippet": "IXPN is currently aiming to keep 80% of Nigeria's internet traffic within national borders by 2030 through collaborations...",
-      "photo_url": "https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2025/06/IXPN-scaled.jpeg",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNVJUalE1VkcxcVozQmFZWGcxVFJERkF4aWxCU2dLTWdZWllvd3FJZ2c=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T10:57:22.000Z",
-      "authors": [
-        "Frank Eleanya"
-      ],
-      "source_url": "https://techcabal.com",
-      "source_name": "TechCabal",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://techcabal.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqKAgKIiJDQklTRXdnTWFnOEtEWFJsWTJoallXSmhiQzVqYjIwb0FBUAE",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZuWW1wa1pHUnVjeElDWlc0b0FBUAE",
-          "topic_name": "Frank Eleanya"
-        }
-      ],
-      "id": "dccb"
-    },
-    {
-      "title": "BSNL launches Quantum 5G FWA, India's first indigenous SIM-less 5G internet service",
-      "link": "https://www.mobigyaan.com/bsnl-quantum-5g-fwa-india-first-sim-less-5g",
-      "snippet": "SIM-less 5G Connectivity: BSNL's Direct-to-Device platform enables seamless auto-authentication without a physical SIM card. This makes Quantum ...",
-      "photo_url": "https://www.mobigyaan.com/wp-content/uploads/2025/06/BSNL-Quantum-5G-FWA.jpg",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNHlVVEJaU25WeFUwbHRRVWt5VFJDTUF4aThCU2dLTWdhSkk0TEozUUk=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T08:05:24.000Z",
-      "authors": [
-        "Divyang Makwana"
-      ],
-      "source_url": "https://www.mobigyaan.com",
-      "source_name": "MobiGyaan",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.mobigyaan.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqKAgKIiJDQklTRXdnTWFnOEtEVzF2WW1sbmVXRmhiaTVqYjIwb0FBUAE",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZtZVhsbWFIQmtNaElDWlc0b0FBUAE",
-          "topic_name": "Divyang Makwana"
-        }
-      ],
-      "id": "86e9"
-    },
-    {
-      "title": "DOT pushes Internet Service Providers to move to Indian Standard Time",
-      "link": "https://www.cnbctv18.com/technology/telecom/dot-pushes-internet-service-providers-to-move-to-indian-standard-time-19625461.htm",
-      "snippet": "Under the draft rules, the department is pushing for a legal mandate requiring all entities to adopt IST (UTC +5:30). At present, telecom and ...",
-      "photo_url": "https://images.cnbctv18.com/uploads/2025/06/map-2025-06-3628727178be34f65543e08f3f3d357d.jpg?impolicy=website&width=1200&height=900",
-      "thumbnail_url": "https://news.google.com/api/attachments/CC8iK0NnNXBkbWxRTFV0TGNtdE9TVEpsVFJEZ0F4aUFCU2dLTWdhaGNwSVJ0UVk=-w200-h200-p-df-rw",
-      "published_datetime_utc": "2025-06-23T11:57:01.000Z",
-      "authors": [
-        "Ashmit Kumar"
-      ],
-      "source_url": "https://www.cnbctv18.com",
-      "source_name": "CNBC TV18",
-      "source_logo_url": null,
-      "source_favicon_url": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.cnbctv18.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
-      "source_publication_id": "CAAqJggKIiBDQklTRWdnTWFnNEtER051WW1OMGRqRTRMbU52YlNnQVAB",
-      "related_topics": [
-        {
-          "topic_id": "CAAqKAgKIiJDQkFTRXdvTkwyY3ZNVEZ5YzJOM1puUjBjaElDWlc0b0FBUAE",
-          "topic_name": "Ashmit Kumar"
-        }
-      ],
-      "id": "270f"
+      "id": 10,
+      "postId": 6,
+      "userId": 5,
+      "username": "content_creator",
+      "createdAt": "2025-06-19T14:30:00Z"
     }
   ]
 }

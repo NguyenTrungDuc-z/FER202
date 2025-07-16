@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './Profile.css';
 
 const Profile = () => {
   const user = JSON.parse(localStorage.getItem('user-info') || sessionStorage.getItem('user-info'));
@@ -8,10 +7,9 @@ const Profile = () => {
   const defaultAvatar = `https://ui-avatars.com/api/?name=${user?.username || 'User'}&background=0077cc&color=fff&size=100`;
 
   const [avatar, setAvatar] = useState(savedAvatar || defaultAvatar);
-  const [preview, setPreview] = useState(null); // ảnh mới chọn chưa xác nhận
+  const [preview, setPreview] = useState(null);
 
   useEffect(() => {
-    // Khi người dùng xác nhận ảnh mới, lưu vào localStorage
     if (avatar) {
       localStorage.setItem('user-avatar', avatar);
     }
@@ -22,7 +20,7 @@ const Profile = () => {
     if (file && file.type.startsWith('image/')) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        setPreview(reader.result); // chỉ gán preview
+        setPreview(reader.result);
       };
       reader.readAsDataURL(file);
     }
@@ -30,46 +28,59 @@ const Profile = () => {
 
   const handleConfirm = () => {
     if (preview) {
-      setAvatar(preview); // chính thức cập nhật
+      setAvatar(preview);
       setPreview(null);
     }
   };
 
-  if (!user) return <p>Bạn chưa đăng nhập.</p>;
+  if (!user) return <div className="container mt-5 alert alert-warning">Bạn chưa đăng nhập.</div>;
 
   return (
-    <div className="container profile-container">
-      <h2 className="mb-4">Thông tin cá nhân</h2>
+    <div className="container mt-5" style={{ maxWidth: '600px' }}>
+      <h3 className="mb-4 text-center">👤 Thông tin cá nhân</h3>
 
-      <div className="avatar-section">
+      <div className="text-center mb-4">
         <img
           src={preview || avatar}
           alt="Avatar"
-          className="profile-avatar"
+          className="rounded-circle border"
+          style={{ width: '120px', height: '120px', objectFit: 'cover' }}
         />
-        <label htmlFor="avatar-upload" className="change-avatar-label">
-          Thay đổi ảnh
-        </label>
-        <input
-          type="file"
-          id="avatar-upload"
-          accept="image/*"
-          onChange={handleAvatarChange}
-          style={{ display: 'none' }}
-        />
+        <div className="mt-2">
+          <label htmlFor="avatar-upload" className="btn btn-outline-primary btn-sm">
+            Thay đổi ảnh
+          </label>
+          <input
+            type="file"
+            id="avatar-upload"
+            accept="image/*"
+            onChange={handleAvatarChange}
+            style={{ display: 'none' }}
+          />
+        </div>
         {preview && (
-          <button className="btn btn-primary mt-2" onClick={handleConfirm}>
+          <button className="btn btn-primary btn-sm mt-2" onClick={handleConfirm}>
             Xác nhận thay đổi
           </button>
         )}
       </div>
 
-      <div className="profile-info mt-4">
-        <p><strong>Tên tài khoản:</strong> {user.username}</p>
-        <p><strong>Email:</strong> {user.email || 'Chưa có'}</p>
-        <p><strong>Họ:</strong> {user.firstname || 'Chưa có'}</p>
-        <p><strong>Tên:</strong> {user.lastname || 'Chưa có'}</p>
-        <p><strong>Số điện thoại:</strong> {user.phone || 'Chưa có'}</p>
+      <div className="card p-3 shadow-sm">
+        <div className="mb-2">
+          <strong>Tên đăng nhập:</strong> {user.username}
+        </div>
+        <div className="mb-2">
+          <strong>Email:</strong> {user.email || <span className="text-muted">Chưa có</span>}
+        </div>
+        <div className="mb-2">
+          <strong>Họ:</strong> {user.firstname || <span className="text-muted">Chưa có</span>}
+        </div>
+        <div className="mb-2">
+          <strong>Tên:</strong> {user.lastname || <span className="text-muted">Chưa có</span>}
+        </div>
+        <div className="mb-2">
+          <strong>Số điện thoại:</strong> {user.phone || <span className="text-muted">Chưa có</span>}
+        </div>
       </div>
     </div>
   );

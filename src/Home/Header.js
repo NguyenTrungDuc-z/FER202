@@ -1,117 +1,184 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { Search, Grid, Lock, LogOut } from 'lucide-react';
-import './Header.css';
+// Header.jsx
+import React, { useState, useRef, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { Lock, LogOut } from "lucide-react";
 
 const Header = () => {
   const navigate = useNavigate();
-  const user = JSON.parse(localStorage.getItem('user-info') || sessionStorage.getItem('user-info'));
-  const avatar = localStorage.getItem('user-avatar');
+  const location = useLocation();
   const dropdownRef = useRef();
-  const [showDropdown, setShowDropdown] = useState(false);
-  const [showBottomMenu, setShowBottomMenu] = useState(false);
+  const megaMenuRef = useRef();
 
-  // Ẩn dropdown khi click ra ngoài
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [showMegaMenu, setShowMegaMenu] = useState(false);
+  const [categories, setCategories] = useState([]);
+
+  const user = JSON.parse(
+    localStorage.getItem("user-info") || sessionStorage.getItem("user-info")
+  );
+  const avatar = localStorage.getItem("user-avatar");
+
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
         setShowDropdown(false);
       }
+      if (megaMenuRef.current && !megaMenuRef.current.contains(e.target)) {
+        setShowMegaMenu(false);
+      }
     };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    fetch("http://localhost:9999/categories")
+      .then((res) => res.json())
+      .then((data) => setCategories(data))
+      .catch((err) => console.error("Lỗi khi load categories:", err));
   }, []);
 
   const handleLogout = () => {
-    localStorage.removeItem('user-info');
-    sessionStorage.removeItem('user-info');
-    localStorage.removeItem('user-avatar');
-    navigate('/login');
+    localStorage.clear();
+    sessionStorage.clear();
+    navigate("/login");
   };
+
+  const hiddenPaths = ["/profile", "/change-password"];
+  const hideNavbarBottom = hiddenPaths.includes(location.pathname);
 
   return (
     <header>
-      {/* --- TOP HEADER --- */}
-      <div className="header-top">
-        <div className="logo" onClick={() => navigate('/')}>
-          <span className="logo-main">TIN TỨC </span><span className="logo-accent">HÀNG NGÀY</span>
-          <p className="logo-sub">Thông tin 24/24</p>
-        </div>
+      <nav
+        className="navbar navbar-expand-lg bg-white border-bottom shadow-sm py-2"
+        style={{ minHeight: "70px" }}
+      >
+        <div className="container-fluid d-flex justify-content-between align-items-center">
+          <div className="d-flex align-items-center me-2">
+            <span
+              className="navbar-brand fw-bold text-danger mb-0"
+              onClick={() => navigate("/")}
+              style={{ cursor: "pointer", fontSize: "1.3rem", lineHeight: "1" }}
+            >
+              HTĐ <span className="text-primary">Blog</span>
+            </span>
+          </div>
 
-        <div className="search-bar">
-          <input type="text" placeholder="Nhập nội dung tìm kiếm" />
-          <Search size={18} />
+          <div ref={dropdownRef} className="ms-2">
+            {user ? (
+              <div className="dropdown">
+                <img
+                  src={avatar || "https://i.pravatar.cc/150?u=default"}
+                  className="rounded-circle"
+                  alt="avatar"
+                  width={32}
+                  height={32}
+                  onClick={() => setShowDropdown((prev) => !prev)}
+                  style={{ cursor: "pointer", border: "1px solid #ccc" }}
+                />
+                {showDropdown && (
+                  <div className="dropdown-menu dropdown-menu-end show mt-1 p-2 bg-light">
+                    <button
+                      className="dropdown-item py-1 px-3"
+                      onClick={() => navigate("/profile")}
+                    >
+                      👋 {user.username}
+                    </button>
+                    <button
+                      className="dropdown-item py-1 px-3 d-flex align-items-center"
+                      onClick={() => navigate("/change-password")}
+                    >
+                      <Lock size={14} className="me-2" />
+                      Đổi mật khẩu
+                    </button>
+                    <button
+                      className="dropdown-item py-1 px-3 d-flex align-items-center"
+                      onClick={handleLogout}
+                    >
+                      <LogOut size={14} className="me-2" />
+                      Đăng xuất
+                    </button>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <button
+                className="btn btn-outline-primary btn-sm rounded-pill px-3"
+                onClick={() => navigate("/login")}
+              >
+                Đăng nhập
+              </button>
+            )}
+          </div>
         </div>
+      </nav>
 
-        <div className="header-icons" ref={dropdownRef}>
-          {/* Avatar + Dropdown */}
-          {user && (
-            <div className="user-dropdown">
-              <img
-                src={avatar}
-                className="avatar-icon"
-                alt="User"
-                onClick={() => setShowDropdown(prev => !prev)}
-              />
-              <div className={`dropdown-menu ${showDropdown ? 'show' : ''}`}>
-                <button
-                  className="dropdown-user"
-                  onClick={() => {
-                    setShowDropdown(false);
-                    navigate('/profile');
-                  }}
-                >
-                  👋 {user.username}
-                </button>
-                <button
-                  className="dropdown-item"
-                  onClick={() => {
-                    setShowDropdown(false);
-                    navigate('/change-password');
-                  }}
-                >
-                  <Lock size={14} style={{ marginRight: 6 }} />
-                  Đổi mật khẩu
-                </button>
-                <button className="dropdown-item" onClick={handleLogout}>
-                  <LogOut size={14} style={{ marginRight: 6 }} />
-                  Đăng xuất
-                </button>
+      {!hideNavbarBottom && (
+        <div className="container-fluid bg-primary shadow-sm py-2 px-2 mt-2 border-top border-primary border-opacity-25">
+          <div className="d-flex align-items-center justify-content-center flex-wrap gap-2">
+            <div className="d-flex gap-1 flex-wrap">
+              <button
+                className="btn btn-sm btn-outline-light fw-bold"
+                onClick={() => {
+                  navigate("/");
+                  window.dispatchEvent(new Event("reset-home"));
+                }}
+              >
+                HOME
+              </button>
+              <button
+                className="btn btn-sm btn-outline-light fw-bold"
+                onClick={() => {
+                  const event = new CustomEvent("sort-newest");
+                  window.dispatchEvent(event);
+                }}
+              >
+                MỚI
+              </button>
+            </div>
+
+            {/* Nút CHỦ ĐỀ */}
+            <div>
+              <button
+                className="btn btn-sm btn-outline-light fw-bold"
+                onClick={() => setShowMegaMenu((prev) => !prev)}
+              >
+                CHỦ ĐỀ
+              </button>
+            </div>
+          </div>
+
+          {/* Mega Menu */}
+          {showMegaMenu && (
+            <div
+              ref={megaMenuRef}
+              className="bg-light p-3 border-top shadow-sm mt-0"
+            >
+              <div className="row">
+                {categories.map((cat) => (
+                  <div key={cat.id} className="col-md-4 mb-2">
+                    <h6
+                      className="text-dark fw-semibold"
+                      style={{ cursor: "pointer" }}
+                      onClick={() => {
+                        const event = new CustomEvent("filter-category", {
+                          detail: cat.id,
+                        });
+                        window.dispatchEvent(event);
+                        setShowMegaMenu(false);
+                      }}
+                    >
+                      📝 {cat.name}
+                    </h6>
+                    <p className="text-muted small">{cat.description}</p>
+                  </div>
+                ))}
               </div>
             </div>
           )}
-      
         </div>
-      </div>
-
-      {/* --- BOTTOM NAVIGATION --- */}
-  <div className="header-bottom">
-  <nav className="main-menu">
-    <button>NÓNG</button>
-    <button>MỚI</button>
-    <button>VIDEO</button>
-    <button>CHỦ ĐỀ</button>
-  </nav>
-
-  <div className="topics">
-    <span># Năng lượng tích cực</span>
-    <span># Khám phá Việt Nam</span>
-    <span># Khám phá Thế Giới</span>
-  </div>
-
-  <div className="menu-icon-container">
-    <div className="menu-icon" onClick={() => setShowBottomMenu(prev => !prev)}>≡</div>
-
-    {showBottomMenu && (
-      <div className="bottom-dropdown">
-        <button onClick={() => alert('Trang chủ')}>🏠 Trang chủ</button>
-        <button onClick={() => alert('Thể thao')}>⚽ Thể thao</button>
-        <button onClick={() => alert('Giải trí')}>🎬 Giải trí</button>
-        <button onClick={() => alert('Kinh tế')}>💰 Kinh tế</button>
-      </div>
-    )}
-  </div>
-</div>
+      )}
     </header>
   );
 };
