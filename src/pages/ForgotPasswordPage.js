@@ -1,7 +1,16 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { Container, Row, Col, Form, Button, Card, Alert, InputGroup } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Form,
+  Button,
+  Card,
+  Alert,
+  InputGroup,
+} from "react-bootstrap";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 export default function ForgotPasswordPage() {
@@ -25,8 +34,9 @@ export default function ForgotPasswordPage() {
       }
 
       const user = res.data[0];
-
-      await axios.patch(`http://localhost:9999/users/${user.id}`, { password: newPassword });
+      await axios.patch(`http://localhost:9999/users/${user.id}`, {
+        password: newPassword,
+      });
 
       setSuccess("✅ Mật khẩu đã được cập nhật thành công!");
       setEmail("");
@@ -40,15 +50,17 @@ export default function ForgotPasswordPage() {
     <Container className="mt-5">
       <Row className="justify-content-center">
         <Col md={6}>
-          <Card className="p-4 shadow">
-            <h2 className="text-center mb-4">Cấp lại mật khẩu</h2>
+          <Card className="p-4 shadow-lg">
+            <h2 className="text-center mb-4 text-warning">Cấp lại mật khẩu</h2>
             {success && <Alert variant="success">{success}</Alert>}
             {error && <Alert variant="danger">{error}</Alert>}
+
             <Form onSubmit={handleReset}>
               <Form.Group className="mb-3">
-                <Form.Label>Nhập email</Form.Label>
+                <Form.Label>Email đã đăng ký</Form.Label>
                 <Form.Control
                   type="email"
+                  placeholder="Nhập email của bạn"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -60,6 +72,7 @@ export default function ForgotPasswordPage() {
                 <InputGroup>
                   <Form.Control
                     type={showPassword ? "text" : "password"}
+                    placeholder="Nhập mật khẩu mới"
                     value={newPassword}
                     onChange={(e) => setNewPassword(e.target.value)}
                     required
@@ -74,7 +87,9 @@ export default function ForgotPasswordPage() {
                 </InputGroup>
               </Form.Group>
 
-              <Button variant="warning" type="submit" className="w-100">Cập nhật mật khẩu</Button>
+              <Button variant="warning" type="submit" className="w-100">
+                Cập nhật mật khẩu
+              </Button>
             </Form>
 
             <div className="text-center mt-3">

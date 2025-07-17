@@ -13,6 +13,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import AddPostPage from "./pages/AddPostPage";
 import ContactPage from "./pages/ContactPage";
 import PostDetail from "./pages/PostDetail";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 // Tạo một component bọc định nghĩa router để dùng useLocation
 const AppWrapper = () => {

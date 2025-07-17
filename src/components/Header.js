@@ -1,20 +1,21 @@
-// src/components/Header.jsx
 import { useEffect, useRef, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
-import { Lock, LogOut } from "lucide-react";
 
 export default function Header() {
   const navigate = useNavigate();
   const location = useLocation();
-  const megaMenuRef = useRef();
   const dropdownRef = useRef();
+  const megaMenuRef = useRef();
 
   const [showDropdown, setShowDropdown] = useState(false);
   const [showMegaMenu, setShowMegaMenu] = useState(false);
   const [categories, setCategories] = useState([]);
 
   const { currentUser, logout } = useAuth();
+
+  const hiddenPaths = ["/profile", "/change-password"];
+  const hideNavbarBottom = hiddenPaths.includes(location.pathname);
 
   useEffect(() => {
     document.addEventListener("mousedown", (e) => {
@@ -30,8 +31,7 @@ export default function Header() {
   useEffect(() => {
     fetch("http://localhost:9999/categories")
       .then((res) => res.json())
-      .then((data) => setCategories(data))
-      .catch((err) => console.error("Lỗi khi tải categories:", err));
+      .then((data) => setCategories(data));
   }, []);
 
   const handleLogout = () => {
@@ -39,26 +39,22 @@ export default function Header() {
     navigate("/login");
   };
 
-  const hiddenPaths = ["/profile", "/change-password"];
-  const hideNavbarBottom = hiddenPaths.includes(location.pathname);
-
   return (
     <header>
+      {/* TOP NAV */}
       <nav className="navbar navbar-expand-lg bg-white border-bottom shadow-sm py-2">
         <div className="container-fluid d-flex justify-content-between align-items-center">
-          <div className="d-flex align-items-center me-2">
-            <span
-              className="navbar-brand fw-bold text-danger mb-0"
-              onClick={() => navigate("/")}
-              style={{ cursor: "pointer", fontSize: "1.3rem", lineHeight: "1" }}
-            >
-              HTĐ <span className="text-primary">Blog</span>
-            </span>
-          </div>
+          <span
+            className="navbar-brand fw-bold text-danger"
+            style={{ fontSize: "1.3rem", cursor: "pointer" }}
+            onClick={() => navigate("/")}
+          >
+            HTĐ <span className="text-primary">Blog</span>
+          </span>
 
-          <div className="d-flex gap-2 align-items-center">
+          <div className="d-flex align-items-center gap-2">
             <button
-              className="btn btn-sm btn-outline-secondary"
+              className="btn btn-outline-secondary btn-sm"
               onClick={() => navigate("/contact")}
             >
               Liên hệ
@@ -68,14 +64,13 @@ export default function Header() {
               <div className="position-relative" ref={dropdownRef}>
                 <img
                   src={currentUser.avatar || "/macdinh.png"}
-                  className="rounded-circle"
-                  alt="avatar"
+                  alt="Avatar"
                   width={32}
                   height={32}
+                  className="rounded-circle border"
+                  style={{ cursor: "pointer" }}
                   onClick={() => setShowDropdown(!showDropdown)}
-                  style={{ cursor: "pointer", border: "1px solid #ccc" }}
                 />
-
                 {showDropdown && (
                   <div
                     className="dropdown-menu show"
@@ -84,13 +79,10 @@ export default function Header() {
                       right: 0,
                       top: "110%",
                       zIndex: 9999,
-                      display: "block",
-                      minWidth: "160px",
-                      padding: "0.5rem",
                     }}
                   >
                     <button
-                      className="dropdown-item d-flex align-items-center gap-2"
+                      className="dropdown-item"
                       onClick={() => {
                         navigate("/profile");
                         setShowDropdown(false);
@@ -98,9 +90,8 @@ export default function Header() {
                     >
                       Hồ sơ cá nhân
                     </button>
-                    
                     <button
-                      className="dropdown-item d-flex align-items-center gap-2"
+                      className="dropdown-item"
                       onClick={() => {
                         handleLogout();
                         setShowDropdown(false);
@@ -111,10 +102,9 @@ export default function Header() {
                   </div>
                 )}
               </div>
-
             ) : (
               <button
-                className="btn btn-outline-primary btn-sm rounded-pill px-3"
+                className="btn btn-outline-primary btn-sm rounded-pill"
                 onClick={() => navigate("/login")}
               >
                 Đăng nhập
@@ -124,32 +114,32 @@ export default function Header() {
         </div>
       </nav>
 
+      {/* BOTTOM NAV (Mega Menu) */}
       {!hideNavbarBottom && (
-        <div className="container-fluid bg-primary shadow-sm py-2 px-2 mt-2 border-top border-primary border-opacity-25">
-          <div className="d-flex align-items-center justify-content-center flex-wrap gap-2">
-            <div className="d-flex gap-1 flex-wrap">
-              <button
-                className="btn btn-sm btn-outline-light fw-bold"
-                onClick={() => {
-                  navigate("/");
-                  window.dispatchEvent(new Event("reset-home"));
-                }}
-              >
-                HOME
-              </button>
-              <button
-                className="btn btn-sm btn-outline-light fw-bold"
-                onClick={() => {
-                  const event = new CustomEvent("sort-newest");
-                  window.dispatchEvent(event);
-                }}
-              >
-                MỚI
-              </button>
-            </div>
-
+        <div
+          className="container-fluid"
+          style={{ backgroundColor: "#90CAF9" }} // màu xanh nhạt
+        >
+          <div className="d-flex justify-content-center gap-2 py-2 flex-wrap">
             <button
-              className="btn btn-sm btn-outline-light fw-bold"
+              className="btn btn-outline-light btn-sm fw-bold"
+              onClick={() => {
+                navigate("/");
+                window.dispatchEvent(new Event("reset-home"));
+              }}
+            >
+              HOME
+            </button>
+            <button
+              className="btn btn-outline-light btn-sm fw-bold"
+              onClick={() =>
+                window.dispatchEvent(new CustomEvent("sort-newest"))
+              }
+            >
+              MỚI
+            </button>
+            <button
+              className="btn btn-outline-light btn-sm fw-bold"
               onClick={() => setShowMegaMenu(!showMegaMenu)}
             >
               CHỦ ĐỀ
@@ -157,21 +147,19 @@ export default function Header() {
           </div>
 
           {showMegaMenu && (
-            <div
-              ref={megaMenuRef}
-              className="bg-light p-3 border-top shadow-sm mt-0"
-            >
+            <div ref={megaMenuRef} className="bg-white px-4 py-3 shadow-sm">
               <div className="row">
                 {categories.map((cat) => (
                   <div key={cat.id} className="col-md-4 mb-2">
                     <h6
-                      className="text-dark fw-semibold"
+                      className="fw-semibold"
                       style={{ cursor: "pointer" }}
                       onClick={() => {
-                        const event = new CustomEvent("filter-category", {
-                          detail: cat.id,
-                        });
-                        window.dispatchEvent(event);
+                        window.dispatchEvent(
+                          new CustomEvent("filter-category", {
+                            detail: cat.id,
+                          })
+                        );
                         setShowMegaMenu(false);
                       }}
                     >

@@ -171,9 +171,9 @@
       "content": "Vue.js là một framework JavaScript tiến bộ cho xây dựng giao diện người dùng. Vue.js được thiết kế để dễ dàng tiếp cận và tích hợp vào các dự án hiện có.",
       "author": "Phạm Minh K",
       "userId": "3",
-      "categoryId": 1,
+      "categoryId": "1",
       "createdAt": "2025-06-18T15:00:00Z",
-      "updatedAt": "2025-06-18T15:00:00Z",
+      "updatedAt": "2025-07-17T01:07:08.875Z",
       "image": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png",
       "tags": [
         "Vue.js",
@@ -183,7 +183,10 @@
       ],
       "views": 120,
       "status": "active",
-      "public": true
+      "public": true,
+      "tag": [
+        ""
+      ]
     },
     {
       "id": "3",
@@ -485,6 +488,14 @@
       "username": "haidz",
       "content": "huhu",
       "createdAt": "2025-07-16T22:56:05.011Z"
+    },
+    {
+      "id": "a7c0",
+      "postId": "2",
+      "userId": "2",
+      "username": "admin",
+      "content": "duc ga vl\n",
+      "createdAt": "2025-07-17T00:54:51.290Z"
     }
   ],
   "likes": [
@@ -617,6 +628,14 @@
       "message": "tôi muốn làm admin",
       "status": 1,
       "createdAt": "2025-07-16T21:53:33.060Z"
+    },
+    {
+      "id": "7c61",
+      "name": "mr3",
+      "email": "haidvhe186716@fpt.edu.com",
+      "message": "tôi muốn ngủ",
+      "status": 0,
+      "createdAt": "2025-07-16T22:58:14.164Z"
     }
   ]
 }

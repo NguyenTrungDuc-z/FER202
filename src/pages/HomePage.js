@@ -3,6 +3,9 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Carousel from "react-bootstrap/Carousel";
 
+
+// Tạo state tạm cho ô nhập
+
 const HomePage = () => {
   const navigate = useNavigate();
   const [, setUser] = useState(null);
@@ -12,7 +15,7 @@ const HomePage = () => {
   const [categoryFilter, setCategoryFilter] = useState("Tất cả");
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6;
-
+const [inputPage, setInputPage] = useState(currentPage);
   // Load user và bài viết kèm thông tin phụ
   useEffect(() => {
     const localUser = localStorage.getItem("user-info");
@@ -222,15 +225,17 @@ const HomePage = () => {
                     <h5 className="card-title">{post.title}</h5>
                     <p className="card-text text-truncate">{post.content}</p>
                     <div className="mb-2">
-                      {post.tag?.split(",").map((tag, i) => (
-                        <span
-                          key={i}
-                          className="badge bg-secondary me-1"
-                          style={{ fontSize: "0.75rem" }}
-                        >
-                          #{tag.trim()}
-                        </span>
-                      ))}
+                      {typeof post.tag === "string" &&
+                        post.tag.split(",").map((tag, i) => (
+                          <span
+                            key={i}
+                            className="badge bg-secondary me-1"
+                            style={{ fontSize: "0.75rem" }}
+                          >
+                            #{tag.trim()}
+                          </span>
+                        ))}
+
                     </div>
 
                     <p className="text-muted mb-1">
@@ -316,47 +321,58 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* Pagination */}
-      <div className="d-flex justify-content-center align-items-center gap-3 mt-4 flex-wrap">
-        <button
-          className="btn btn-outline-primary btn-sm"
-          disabled={currentPage === 1}
-          onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-        >
-          ← Trước
-        </button>
+   
+{/* Pagination */}
+<div className="d-flex justify-content-center align-items-center gap-3 mt-4 flex-wrap">
+  <button
+    className="btn btn-outline-primary btn-sm"
+    disabled={currentPage === 1}
+    onClick={() => {
+      const newPage = Math.max(currentPage - 1, 1);
+      setCurrentPage(newPage);
+      setInputPage(newPage); // Đồng bộ input
+    }}
+  >
+    ← Trước
+  </button>
 
-        <div className="d-flex align-items-center gap-2">
-          <span>Trang</span>
-          <input
-            type="number"
-            min="1"
-            max={totalPages}
-            value={currentPage}
-            onChange={(e) => {
-              let page = parseInt(e.target.value);
-              if (!isNaN(page)) {
-                if (page < 1) page = 1;
-                else if (page > totalPages) page = totalPages;
-                setCurrentPage(page);
-              }
-            }}
-            className="form-control"
-            style={{ width: "50px" }}
-          />
-          <span>/ {totalPages}</span>
-        </div>
-
-        <button
-          className="btn btn-outline-primary btn-sm"
-          disabled={currentPage === totalPages}
-          onClick={() =>
-            setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+  <div className="d-flex align-items-center gap-2">
+    <span>Trang</span>
+    <input
+      type="number"
+      min="1"
+      max={totalPages}
+      value={inputPage}
+      onChange={(e) => setInputPage(e.target.value)}
+      onKeyDown={(e) => {
+        if (e.key === "Enter") {
+          let page = parseInt(inputPage);
+          if (!isNaN(page)) {
+            page = Math.max(1, Math.min(totalPages, page));
+            setCurrentPage(page);
+            setInputPage(page); // Cập nhật lại input nếu người dùng nhập ngoài phạm vi
           }
-        >
-          Sau →
-        </button>
-      </div>
+        }
+      }}
+      className="form-control"
+      style={{ width: "60px" }}
+    />
+    <span>/ {totalPages}</span>
+  </div>
+
+  <button
+    className="btn btn-outline-primary btn-sm"
+    disabled={currentPage === totalPages}
+    onClick={() => {
+      const newPage = Math.min(currentPage + 1, totalPages);
+      setCurrentPage(newPage);
+      setInputPage(newPage); // Đồng bộ input
+    }}
+  >
+    Sau →
+  </button>
+</div>
+
     </div>
   );
 };
